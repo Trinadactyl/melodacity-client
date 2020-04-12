@@ -73,7 +73,7 @@ An app designed for musicians, songwriters, and those who like to create stuff.
  
 Progress board: https://trello.com/b/wHnyMjOi/capstone-1
 
-:musical_keyboard: As a user, I can: 
+:musical_keyboard: **As a user, I can:**
 
 :musical_note: Choose to create an account/login or simply create without saving.
 
@@ -83,7 +83,7 @@ Progress board: https://trello.com/b/wHnyMjOi/capstone-1
 
 :musical_note: Record a melody and play it back!
 
-:musical_keyboard: With an account, I can:
+:musical_keyboard: **With an account, I can:**
 
 :musical_note: Save my recordings to hear them again later
 

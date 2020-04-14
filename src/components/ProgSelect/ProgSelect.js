@@ -7,19 +7,22 @@ export default class ProgSelect extends Component {
     return (
       <div className='progressions'>
         <h1>Choose a progression</h1>
-        <button></button>
-        <button></button>
-        <button></button>
-        <button></button>
-        <button></button>
-        <button></button>
-        <button></button>
-        <button></button>
-        <button></button>
-        <button></button>
+        <button>I IV V</button>
+        <button>I IV VII</button>
+        <button>I VI VII</button>
+        <button>II V I</button>
+        <button>I IV II V</button>
+        <button>I IV V I</button>
+        <button>I IV V III VII</button>
+        <button>I V VI IV</button>
+        <button>III VI II V</button>
+        <button>I IV I V I</button>
 
         <nav>
-          <button>Next</button>
+          <Link to={'/jammin'}>
+            <button>Next</button>
+          </Link>
+          
           <Link to={'/key'}>
             <button>Back</button>
           </Link> 

@@ -7,6 +7,8 @@ import Jambtn from './components/Jambtn/Jambtn';
 import Users from './components/Users/Users';
 import KeySelect from './components/KeySelect/KeySelect';
 import ProgSelect from './components/ProgSelect/ProgSelect';
+import Jam from './components/Jam/Jam';
+import LoginForm from './components/LoginForm/LoginForm';
 
 function App() {
 
@@ -20,6 +22,8 @@ function App() {
         <Route exact path={'/'} component={Jambtn} />
         <Route path={'/key'} component={KeySelect} />
         <Route path={'/progression'} component={ProgSelect} />
+        <Route path={'/jammin'} component={Jam} />
+        <Route path={'/login'} component={LoginForm} />
 
       <Users />
     </div>

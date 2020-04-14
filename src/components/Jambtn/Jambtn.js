@@ -1,13 +1,18 @@
 import React, { Component } from 'react';
-//import { link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './Jambtn.css'
+//import { Route } from 'react-router-dom';
+//import KeySelect from '../KeySelect/KeySelect';
 
 export default class Jambtn extends Component {
+ 
   render() {
     return (
-      <button className='Jambtn'>
-        JAM!
+    <Link to='/key'>
+      <button className='Jambtn'> 
+          JAM!        
       </button>
+      </Link>
     )
   }
 }

@@ -6,7 +6,7 @@ export default function Header () {
   return (
     <header className='Header'>
       <Link to='/'>
-        <h1>Welcome to Melodactity!</h1>
+        <h1>Melodactity!</h1>
       </Link>
     </header>
   )

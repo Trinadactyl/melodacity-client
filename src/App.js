@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header/Header';
@@ -9,11 +9,19 @@ import ProgSelect from './components/ProgSelect/ProgSelect';
 import Jam from './components/Jam/Jam';
 import LoginForm from './components/LoginForm/LoginForm';
 import RegistrationForm from './components/RegistrationForm/RegistrationForm';
-//import UsersApiService from './services/user-api-service'
+import UsersApiService from './services/user-api-service'
 
-function App() {
+class App extends Component {
 
+componentDidMount() {
+  UsersApiService
+    .getUsers()
+    .then(users => {
+      console.log(users)
+    })
+}
 
+render() {
   return (
 
     <div className="App">
@@ -31,6 +39,7 @@ function App() {
       <Users />
     </div>
   );
+  }
 }
 
 export default App;

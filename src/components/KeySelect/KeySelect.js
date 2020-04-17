@@ -4,36 +4,53 @@ import { Link } from 'react-router-dom';
 //import notes from '../notes'
 
 export default class KeySelect extends Component {
-  state = {
-    notes: ['A', 'Ab', 'B', 'Bb', 'C', 'D', 'Db', 'E', 'Eb', 'F', 'G', 'Gb'],
-    seletedkey: '',
-    majormin:''
+  constructor(props) {
+    super(props)  
+    this.state = {
+    key: '',
+    tonic:''
+    }
   }
 
+
+  handleKeySelect(key) {
+    this.setState(state => ({
+      key: key 
+    }))
+  }
+
+  handleTonicSelect(tonic) {
+    this.setState(state => ({
+      tonic: tonic
+    }))
+  }
+  
+
   render () {
-
-    
     return (
-      <div className='key-select'>
+      <>
 
-      
         <h1>Choose a Key</h1>
-        
-        <button>A</button>
-        <button>A#</button>
-        <button>B</button>
-        <button>C</button>
-        <button>C#</button>
-        <button>D</button>
-        <button>D#</button>
-        <button>E</button>
-        <button>F</button>
-        <button>F#</button>
-        <button>G</button>
-        <button>G#</button>
 
-        <button>Major</button>
-        <button>Minor</button>
+        <div className='key-select'>     
+          <button className='key' onClick={()=> this.handleKeySelect('A')}>A</button>
+          <button className='key' onClick={()=> this.handleKeySelect('A#')}>A#</button>
+          <button className='key' onClick={()=> this.handleKeySelect('B')}>B</button>
+          <button className='key' onClick={()=> this.handleKeySelect('C')}>C</button>
+          <button className='key' onClick={()=> this.handleKeySelect('C#')}>C#</button>
+          <button className='key' onClick={()=> this.handleKeySelect('D')}>D</button>
+          <button className='key' onClick={()=> this.handleKeySelect('D#')}>D#</button>
+          <button className='key' onClick={()=> this.handleKeySelect('E')}>E</button>
+          <button className='key' onClick={()=> this.handleKeySelect('F')}>F</button>
+          <button className='key' onClick={()=> this.handleKeySelect('F#')}>F#</button>
+          <button className='key' onClick={()=> this.handleKeySelect('G')}>G</button>
+          <button className='key' onClick={()=> this.handleKeySelect('G#')}>G#</button>
+        </div>
+
+        <div className='tonic-select'>
+          <button onClick={()=> this.handleTonicSelect('Major')}>Major</button>
+          <button onClick={()=> this.handleTonicSelect('Minor')}>Minor</button>
+        </div>
 
         <nav>
           <Link to='/progression'>
@@ -44,7 +61,7 @@ export default class KeySelect extends Component {
          </Link>
         </nav>
   
-      </div>
+      </>
     )
   }
 }

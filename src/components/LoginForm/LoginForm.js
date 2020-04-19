@@ -2,11 +2,14 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import AuthApiService from '../../services/auth-api-service'
 import TokenService from '../../services/token-service'
+import { AppContext } from '../../Context'
 
 export default class LoginForm extends Component {
   static defaultProps = {
     onLoginSuccess: () => {}
   }
+
+  static contextType = AppContext
 
   state = { error: null }
 
@@ -28,13 +31,11 @@ export default class LoginForm extends Component {
       password.value = ''
       TokenService.saveAuthToken(res.authToken)
       this.props.onLoginSuccess()
-    })
+      //window.location.reload(false)
+      //this.context.updateIsLoggedn()
+    })     
     .catch(res => {
       this.setState({ error: res.error})
-    }) 
-    .then(() => {
-      //refresh the page
-      window.location.reload(false)
     }) 
   }
 

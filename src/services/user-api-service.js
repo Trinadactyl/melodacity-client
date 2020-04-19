@@ -1,5 +1,6 @@
 import config from "../config"
 
+
 const UsersApiService = {
   getUsers() {
     return fetch(`${config.API_ENDPOINT}/users`, {
@@ -10,7 +11,6 @@ const UsersApiService = {
       : res.json()
     )
   }
-
 }
 
 export default UsersApiService

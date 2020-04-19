@@ -20,6 +20,7 @@ export default class LoginForm extends Component {
       password: password.value
     })
     .then(res => {
+      console.log('login success -- refresh browser')
       user_name.value = ''
       password.value = ''
       TokenService.saveAuthToken(res.authToken)
@@ -27,13 +28,20 @@ export default class LoginForm extends Component {
     })
     .catch(res => {
       this.setState({ error: res.error})
-    })
+    }) 
+    .then(() => {
+      window.location.reload(false)
+    }) 
   }
 
 
   render() {
+    const { error } = this.state
     return (
       <form className='login-form' onSubmit={this.handleSubmitJwtAuth}>
+        <div role='alert'>
+          {error && <p>{error}</p>}
+        </div>
         <div className='user_name'>
           <label htmlFor='LoginForm__user_name'>
             User name
@@ -55,9 +63,11 @@ export default class LoginForm extends Component {
             id='LoginForm__password'>
           </input>
         </div>
+
         <button type='submit'>
           Login
-        </button>
+        </button>    
+            
         <Link to={'/'}>
           <button>
             Cancel

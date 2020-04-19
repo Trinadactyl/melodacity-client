@@ -25,7 +25,8 @@ import './Header.css';
 export default function Header () {
 
  
-  return (
+  return <>
+    
     <header className='Header'>
       <Link to='/'>
         <h1>Melodactity!</h1>
@@ -35,5 +36,6 @@ export default function Header () {
         [insert settings icon]
       </button>
     </header>
-  )
+    
+  </>
 }

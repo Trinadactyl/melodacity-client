@@ -17,11 +17,12 @@ import LoginPage from './components/LoginPage/LoginPage';
 import TokenService from './services/token-service';
 
 class App extends Component {
-  state = { isLoggedIn: false }
+  state = { isLoggedIn: TokenService.hasAuthToken() }
 
 updateIsLoggedIn = () => {
   this.setState({isLoggedIn: 
     TokenService.hasAuthToken()})
+    console.log('isLoggedIn:', TokenService.hasAuthToken())
 }
 
 componentDidMount() {

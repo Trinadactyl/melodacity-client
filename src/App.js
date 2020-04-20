@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
-import { AppContext } from './Context'
+import { AppContext } from './AppContext'
 import './App.css';
 import Header from './components/Header/Header';
 //import PrivateRoute from './components/Utils/PrivateRoute';

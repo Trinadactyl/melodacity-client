@@ -1,50 +1,55 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import MusicContext from '../../MusicContext'
 //import { Route } from 'react-router-dom';
 //import notes from '../notes'
+import './KeySelect.css'
 
 export default class KeySelect extends Component {
-  constructor(props) {
-    super(props)  
-    this.state = {
-    key: '',
-    tonic:''
-    }
-  }
+
+  static contextType = MusicContext
+
+  // constructor(props) {
+  //   super(props)  
+  //   this.state = {
+  //   key: '',
+  //   tonic:''
+  //   }
+  // }
 
 
-  handleKeySelect(key) {
-    this.setState(state => ({
-      key: key 
-    }))
-  }
+  // context.setKey()(key) {
+  //   this.context.setState(state => ({
+  //     key: key 
+  //   }))
+  // }
 
-  handleTonicSelect(tonic) {
-    this.setState(state => ({
-      tonic: tonic
-    }))
-  }
+  // handleTonicSelect(tonic) {
+  //   this.setState(state => ({
+  //     tonic: tonic
+  //   }))
+  // }
   
 
   render () {
+    console.log(this.context.key)
     return (
       <>
-
         <h1>Choose a Key</h1>
 
         <div className='key-select'>     
-          <button className='key' onClick={()=> this.handleKeySelect('A')}>A</button>
-          <button className='key' onClick={()=> this.handleKeySelect('A#')}>A#</button>
-          <button className='key' onClick={()=> this.handleKeySelect('B')}>B</button>
-          <button className='key' onClick={()=> this.handleKeySelect('C')}>C</button>
-          <button className='key' onClick={()=> this.handleKeySelect('C#')}>C#</button>
-          <button className='key' onClick={()=> this.handleKeySelect('D')}>D</button>
-          <button className='key' onClick={()=> this.handleKeySelect('D#')}>D#</button>
-          <button className='key' onClick={()=> this.handleKeySelect('E')}>E</button>
-          <button className='key' onClick={()=> this.handleKeySelect('F')}>F</button>
-          <button className='key' onClick={()=> this.handleKeySelect('F#')}>F#</button>
-          <button className='key' onClick={()=> this.handleKeySelect('G')}>G</button>
-          <button className='key' onClick={()=> this.handleKeySelect('G#')}>G#</button>
+          <button className='key' onClick={()=> this.context.setKey('A')}>A</button>
+          <button className='key' onClick={()=> this.context.setKey('A#')}>A#</button>
+          <button className='key' onClick={()=> this.context.setKey('B')}>B</button>
+          <button className='key' onClick={()=> this.context.setKey('C')}>C</button>
+          <button className='key' onClick={()=> this.context.setKey('C#')}>C#</button>
+          <button className='key' onClick={()=> this.context.setKey('D')}>D</button>
+          <button className='key' onClick={()=> this.context.setKey('D#')}>D#</button>
+          <button className='key' onClick={()=> this.context.setKey('E')}>E</button>
+          <button className='key' onClick={()=> this.context.setKey('F')}>F</button>
+          <button className='key' onClick={()=> this.context.setKey('F#')}>F#</button>
+          <button className='key' onClick={()=> this.context.setKey('G')}>G</button>
+          <button className='key' onClick={()=> this.context.setKey('G#')}>G#</button>
         </div>
 
         <div className='tonic-select'>

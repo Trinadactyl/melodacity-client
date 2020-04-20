@@ -10,7 +10,9 @@ const UsersApiService = {
       ? res.json().then(e => Promise.reject(e))
       : res.json()
     )
-  }
+  },
+
+  //end of usersApiService
 }
 
 export default UsersApiService

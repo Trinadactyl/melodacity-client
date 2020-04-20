@@ -1,11 +1,37 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import AuthApiService from '../../services/auth-api-service'
 
 export default class RegistrationForm extends Component {
 
+  state = { error: null }
+
+  handleSubmit = ev => {
+    ev.preventDefault()
+    const { full_name, user_name, password } = ev.target
+
+    this.setState({ error: null })
+    AuthApiService.postUser({
+      full_name: full_name.value,
+      user_name: user_name.value,
+      password: password.value,
+    })
+    .then(user => {
+      full_name.value = ''
+      user_name.value = ''
+      password.value = ''
+      //this.props.onRegistrationSuccess() 
+    })
+    .catch(res => {
+      this.setState({ error: res.error })
+    })
+
+    
+  }
+
   render() {
     return (
-      <form>
+      <form onSubmit={this.handleSubmit}>
         <div className='full_name'>
         <label htmlFor='RegistrationForm__full_name'>
           Full name 

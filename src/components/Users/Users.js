@@ -4,7 +4,7 @@ import './Users.css'
 //import userApiService from '../../services/user-api-service'
 import TokenService from '../../services/token-service';
 //import config from '../../config'
-import { AppContext } from '../../Context'
+import { AppContext } from '../../AppContext'
 
 
 export default class Users extends Component {
@@ -53,7 +53,6 @@ export default class Users extends Component {
         </div>
       )
   }
-
 
   render() {
     return (

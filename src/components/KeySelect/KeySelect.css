@@ -3,5 +3,11 @@
 }
 
 .key {
+  height: 4em;
+  width: 4em;
   padding: 5px;
+  margin: 5px;
+  border-radius: 50%;
+  background-color: #6CDA00;
+  color: black
 }

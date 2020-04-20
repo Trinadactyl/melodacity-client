@@ -34,7 +34,7 @@ componentDidMount() {
 render() {
   const value = {
     isLoggedIn: this.state.isLoggedIn,
-    updateIsLoggedIn: this.updateIsLoggedIn()
+    updateIsLoggedIn: this.updateIsLoggedIn
   }
 
   return (

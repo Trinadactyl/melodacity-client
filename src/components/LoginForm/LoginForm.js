@@ -32,8 +32,8 @@ export default class LoginForm extends Component {
       TokenService.saveAuthToken(res.authToken)
       this.props.onLoginSuccess()
       //window.location.reload(false)
-      //this.context.updateIsLoggedn()
-    })     
+      this.context.updateIsLoggedIn()
+    })    
     .catch(res => {
       this.setState({ error: res.error})
     }) 

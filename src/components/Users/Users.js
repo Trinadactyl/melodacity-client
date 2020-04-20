@@ -4,9 +4,13 @@ import './Users.css'
 //import userApiService from '../../services/user-api-service'
 import TokenService from '../../services/token-service';
 //import config from '../../config'
+import { AppContext } from '../../Context'
 
 
 export default class Users extends Component {
+
+  static contextType = AppContext
+  
   constructor(props) {
     super(props)
       this.state = {
@@ -21,8 +25,9 @@ export default class Users extends Component {
 
   handleLogoutClick = () => {
     TokenService.clearAuthToken()
+    this.context.updateIsLoggedIn()
     //refreshing the page
-    window.location.reload(false)
+    //window.location.reload(false)
   }
 
   renderLogoutLink() {
@@ -39,22 +44,22 @@ export default class Users extends Component {
   }
 
   renderLoginLink() {
-    return (
-      <div className='user-not-logged-in'>
-        <Link to='/login'>Login</Link>
-        |
-        <Link to='/register'>Register</Link>
-      </div>
-    )
+      return (
+        <div className='user-not-logged-in'>
+          <Link to='/login'>Login</Link>
+          |
+          <Link to='/register'>Register</Link>
+        </div>
+      )
   }
 
 
   render() {
     return (
       <div className='user-links'>
-        {TokenService.hasAuthToken()
+        {this.context.isLoggedIn
         ? this.renderLogoutLink()
-        : this.renderLoginLink()}
+        : this.renderLoginLink() }
       </div>
     )
   }

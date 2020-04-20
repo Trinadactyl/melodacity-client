@@ -17,12 +17,21 @@ import LoginPage from './components/LoginPage/LoginPage';
 import TokenService from './services/token-service';
 
 class App extends Component {
-  state = { isLoggedIn: TokenService.hasAuthToken() }
+  state = { 
+    isLoggedIn: TokenService.hasAuthToken(), 
+    userName: localStorage.userName,
+  }
 
 updateIsLoggedIn = () => {
   this.setState({isLoggedIn: 
     TokenService.hasAuthToken()})
     console.log('isLoggedIn:', TokenService.hasAuthToken())
+}
+
+updateUserName = (userName) => {
+  this.setState({
+    userName: userName
+  })
 }
 
 componentDidMount() {
@@ -31,11 +40,14 @@ componentDidMount() {
     .then(users => {
       console.log(users)
     })
+  console.log(this.state.userName)
 }
+
 render() {
   const value = {
     isLoggedIn: this.state.isLoggedIn,
-    updateIsLoggedIn: this.updateIsLoggedIn
+    updateIsLoggedIn: this.updateIsLoggedIn,
+    updateUserName: this.updateUserName
   }
 
   return (

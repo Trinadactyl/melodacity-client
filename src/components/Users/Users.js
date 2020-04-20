@@ -11,29 +11,30 @@ export default class Users extends Component {
 
   static contextType = AppContext
   
-  constructor(props) {
-    super(props)
-      this.state = {
-      userName: localStorage.userName,
-    }
-  }
+  // constructor(props) {
+  //   super(props)
+  //     this.state = {
+  //     userName: localStorage.userName,
+  //   }
+  // }
 
   // getUserName = () => {
   //   const userName = localStorage.getItem('userName');
   //   this.setState({userName: userName})
   //   }  
 
-  handleLogoutClick = () => {
+    handleLogoutClick = () => {
     TokenService.clearAuthToken()
     this.context.updateIsLoggedIn()
+    this.context.updateUserName()
     //refreshing the page
     //window.location.reload(false)
-  }
+    }
 
   renderLogoutLink() {
     return (
       <div className='user-logged-in'>
-        <span className='greeting'>Hello {this.state.userName}</span>
+        <span className='greeting'>Hello {localStorage.userName}</span>
         <Link
           onClick={this.handleLogoutClick}
           to='/'>

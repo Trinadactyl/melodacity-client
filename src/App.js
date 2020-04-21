@@ -15,6 +15,9 @@ import RegistrationForm from './components/RegistrationForm/RegistrationForm';
 import UsersApiService from './services/user-api-service'
 import LoginPage from './components/LoginPage/LoginPage';
 import TokenService from './services/token-service';
+import { MusicProvider } from './MusicContext';
+//import { MusicProvider } from './MusicContext';
+//import MusicProvider from './MusicContext'
 
 class App extends Component {
   state = { 
@@ -52,6 +55,7 @@ render() {
 
   return (
     <AppContext.Provider value={value}>
+    <MusicProvider>  
       <div className="App">
         <header className="App-header">
           <Header />
@@ -61,14 +65,14 @@ render() {
 
           <PublicRoute path={'/login'} component={LoginPage} />
           <PublicRoute path={'/register'} component={RegistrationForm} />
-          
-
+                  
           <Route path={'/key'} component={KeySelect} />
           <Route path={'/progression'} component={ProgSelect} />
           <Route path={'/jammin'} component={Jam} />
           
         <Users />
       </div>
+    </MusicProvider>
     </AppContext.Provider>
   );
   }

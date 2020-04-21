@@ -32,7 +32,6 @@ export default class KeySelect extends Component {
   
 
   render () {
-    console.log(this.context.key)
     return (
       <>
         <h1>Choose a Key</h1>

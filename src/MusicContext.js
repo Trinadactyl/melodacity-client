@@ -6,7 +6,7 @@ const MusicContext = React.createContext({
   prog: '',
   melody: [],
   setKey: () => {},
-  setToic: () => {},
+  setTonic: () => {},
   setProg: () => {},
   setMelody: () => {},
 })
@@ -22,13 +22,14 @@ export class MusicProvider extends Component {
 
   setKey = key => {
     this.setState({ key: key })
+    console.log(this.state.key)
   }
 
   setTonic = tonic => {
     this.setState({ tonic: tonic })
   }
 
-  setprog = prog => {
+  setProg = prog => {
     this.setState({ prog: prog })
   }
 

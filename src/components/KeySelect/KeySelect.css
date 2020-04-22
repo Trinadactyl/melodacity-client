@@ -8,6 +8,22 @@
   padding: 5px;
   margin: 5px;
   border-radius: 50%;
-  background-color: #6CDA00;
+  background-color: rgb(105, 168, 42) ;
   color: black
+}
+
+.tonic {
+  height: 3em;
+  width: 5em;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 40%;
+  background-color: rgb(85, 170, 0);
+}
+
+.nav {
+  height: 6em;
+  width: 7em;
+  border-radius: 20%;
+  margin: 20px;
 }

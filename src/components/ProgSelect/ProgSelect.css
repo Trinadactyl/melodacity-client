@@ -1,0 +1,18 @@
+.prog {
+  padding: 5px;
+  margin: 5px;
+  border-radius: 50%;
+  background-color: rgb(105, 168, 42);
+  font-size: 16px;
+  height: 5em;
+  width: 5em;
+  color: black;
+  border: magenta 6px;
+}
+
+.nav {
+  height: 6em;
+  width: 7em;
+  border-radius: 20%;
+  margin: 20px;
+}

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import MusicContext from '../../MusicContext'
 //import { Route } from 'react-router-dom';
-//import notes from '../notes'
+//import notes from '../notes';
 import './KeySelect.css'
 
 export default class KeySelect extends Component {
@@ -52,16 +52,16 @@ export default class KeySelect extends Component {
         </div>
 
         <div className='tonic-select'>
-          <button onClick={()=> this.handleTonicSelect('Major')}>Major</button>
-          <button onClick={()=> this.handleTonicSelect('Minor')}>Minor</button>
+          <button className='tonic' onClick={()=> this.context.setTonic('Major')}>Major</button>
+          <button className='tonic' onClick={()=> this.context.setTonic('Minor')}>Minor</button>
         </div>
 
         <nav>
-          <Link to='/progression'>
-            <button>Next</button>
+          <Link to='/'>
+            <button className='nav'>Back</button>
           </Link>
-         <Link to='/'>
-           <button>Back</button>
+         <Link to='/progression'>
+           <button className='nav'>Next</button>
          </Link>
         </nav>
   

@@ -1,51 +1,112 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import MusicProvider from '../../MusicContext';
-//import musicStore from '../../musicStore'
+//import musicStore from '../../musicStore';
+import './Jam.css'
 
 export default class Jam extends Component {
   static contextType = MusicProvider
 
-  renderChordButtons() {
-    const chordProg = toString(this.context.prog)
-    return chordProg
-  }
-
-  renderProgDisplay() {
-    console.log('this.context.prog', this.context.prog)
+  displayProg() {','
     const prog = this.context.prog
-    //console.log('this.contex.state.prog',this.contex.state.prog )
+    if(prog.length < 1) {
+      return 'Please choose a progression'
+    }
     return prog
+  };
+
+  displayKey() {
+    const key = this.context.key
+    if (key === '') {
+      return 'Please choose a key'
+    }
+    return key
   }
 
-  
+  renderChordButtons() {
+  //   const majorScales = { 
+  //     'A': ['A','B','Db','D','E','Gb','Ab','A'],
+  //     'Ab': ['Ab','Bb','C','Db','Eb','F','G','Ab'],
+  //     'B': ['B','Db','Eb','E','Gb','Ab','Bb','B'],
+  //     'Bb': ['Bb','C','D','Eb','F','G','A','Bb'],
+  //     'C': ['C','D','E','F','G','A','B','C'],
+  //     'D': ['D','E','Eb','G','A','B','Bb','D'],
+  //     'Db': ['Db','Eb','F','Gb','Ab','Bb','C','Db'],
+  //     'E': ['E','Gb','Ab','A','B','Db','Fb','E'],
+  //     'Eb': ['Eb','F','G','Ab','Bb','C','D','Eb'],
+  //     'F': ['F','G','A','Bb','C','D','E','F'],
+  //     'G': ['G','A','B','C','D','E','Gb','G'],
+  //     'Gb': ['Gb','Ab','Bb','Cb','Db','Eb','F','Gb'],
+  //   }
+  //   const minorScales = { 
+  //   'A': ['A','B','Db','D','E','Gb','Ab','A'],
+  //   'Ab': ['Ab','Bb','C','Db','Eb','F','G','Ab'],
+  //   'B': ['B','Db','Eb','E','Gb','Ab','Bb','B'],
+  //   'Bb': ['Bb','C','D','Eb','F','G','A','Bb'],
+  //   'C': ['C','D','E','F','G','A','B','C'],
+  //   'D': ['D','E','Eb','G','A','B','Bb','D'],
+  //   'Db': ['Db','Eb','F','Gb','Ab','Bb','C','Db'],
+  //   'E': ['E','Gb','Ab','A','B','Db','Fb','E'],
+  //   'Eb': ['Eb','F','G','Ab','Bb','C','D','Eb'],
+  //   'F': ['F','G','A','Bb','C','D','E','F'],
+  //   'G': ['G','A','B','C','D','E','Gb','G'],
+  //   'Gb': ['Gb','Ab','Bb','Cb','Db','Eb','F','Gb'],
+  // }
+    // if (this.context.tonic === 'minor') {
+    //   const prog = minorScales.toArray()
 
-  render(){
-    return (
-      <div className='jam-page'>
-        <h1>Let's Jam!</h1>
-        <h2>Progression: {this.renderProgDisplay()}</h2>
-        <h2>In the key of: {this.context.key}</h2>
+    //   console.log(prog)
+    //   return prog
+    // } else {
+    //   const prog = majorScales.toArray()
+    //   console.log(prog)
+    //   return prog
+    // }
+    return
+  }
 
+  // handleSetMelody() {
+  //   const someMelody = someScale[1]
+  //   console.log('current prog', prog, typeof(prog))
+  //   console.log('scale', someScale)
+  //   console.log('melody', someMelody)
+  //   this.context.setMelody(someMelody)
+  //   //return
+  // }
+
+    render() {
+        //const prog = this.context.prog
+        //const someScale = ['C','D','E','F','G','A','B','C']
+        //const someMelody = someScale[1]
+
+      return (
+        <>
+        <div className='jam-header'>
+          <h1>Let's Jam!</h1>
+            <h2>Progression: {this.displayProg()}</h2>
+            <h2>Key: {this.displayKey()}</h2>
+        </div>
         <div className='chords'>
-          {'chords of selected key go here'}
+          {this.renderChordButtons()}
         </div>
-        <div className='notes'>
-          {'corresponding notes alligned with chords'}
-        </div>
+
+        <button>Click to set a melody</button>
 
         <div className='controls'>
           <button>Record</button>
           <button>Stop</button>
           <button>Play</button>
         </div>
-        <div>
-          <button>Save</button>
+
+        <nav>
           <Link to='/progression'>
-            <button>Back</button>
-          </Link>
-        </div>
-      </div>
-    )
-  }
+           <button className='nav'>Back</button>
+          </Link> 
+          <Link to='/save'>
+          <button className='nav'>Save</button>
+          </Link>        
+        </nav>
+        </>
+      )
+    }
 }

@@ -3,7 +3,7 @@ import { Route } from 'react-router-dom';
 import { AppContext } from './AppContext'
 import './App.css';
 import Header from './components/Header/Header';
-//import PrivateRoute from './components/Utils/PrivateRoute';
+import PrivateRoute from './components/Utils/PrivateRoute';
 import PublicRoute from './components/Utils/PublicRoute';
 import Jambtn from './components/Jambtn/Jambtn';
 import Users from './components/Users/Users';
@@ -16,6 +16,7 @@ import UsersApiService from './services/user-api-service'
 import LoginPage from './components/LoginPage/LoginPage';
 import TokenService from './services/token-service';
 import { MusicProvider } from './MusicContext';
+import SaveMelody from './SaveMelody/SaveMelody';
 //import { MusicProvider } from './MusicContext';
 //import MusicProvider from './MusicContext'
 
@@ -43,7 +44,6 @@ componentDidMount() {
     .then(users => {
       console.log(users)
     })
-  console.log(this.state.userName)
 }
 
 render() {
@@ -69,6 +69,8 @@ render() {
           <Route path={'/key'} component={KeySelect} />
           <Route path={'/progression'} component={ProgSelect} />
           <Route path={'/jammin'} component={Jam} />
+
+          <PrivateRoute path={'/save'} component={SaveMelody} />
           
         <Users />
       </div>

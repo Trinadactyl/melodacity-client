@@ -43,10 +43,10 @@ export class MusicProvider extends Component {
 
   render() {
     const value = {
-      key: this.key,
-      tonic: this.tonic,
-      prog: this.prog,
-      melody: this.melody,
+      key: this.state.key,
+      tonic: this.state.tonic,
+      prog: this.state.prog,
+      melody: this.state.melody,
       setKey: this.setKey,
       setTonic: this.setTonic,
       setProg: this.setProg,

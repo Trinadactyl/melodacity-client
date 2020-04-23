@@ -24,10 +24,10 @@ export default class LoginForm extends Component {
     })
     .then(res => {
       localStorage.setItem('userName', user_name.value);
+      localStorage.setItem('userId', res.userId )
       //this.context.updateUserName(user_name.value)
       //also want to store name of current user to display on login
       //localStorage.setItem('name', name.value)
-      console.log('login success -- refresh browser')
       user_name.value = ''
       password.value = ''
       TokenService.saveAuthToken(res.authToken)

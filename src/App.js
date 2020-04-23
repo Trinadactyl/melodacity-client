@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
-import { AppContext } from './AppContext'
+import { AppContext } from './AppContext';
+import { MusicProvider } from './MusicContext';
 import './App.css';
 import Header from './components/Header/Header';
 import PrivateRoute from './components/Utils/PrivateRoute';
@@ -10,15 +11,13 @@ import Users from './components/Users/Users';
 import KeySelect from './components/KeySelect/KeySelect';
 import ProgSelect from './components/ProgSelect/ProgSelect';
 import Jam from './components/Jam/Jam';
-//import LoginForm from './components/LoginForm/LoginForm';
 import RegistrationForm from './components/RegistrationForm/RegistrationForm';
 import UsersApiService from './services/user-api-service'
 import LoginPage from './components/LoginPage/LoginPage';
 import TokenService from './services/token-service';
-import { MusicProvider } from './MusicContext';
+
 import SaveMelody from './SaveMelody/SaveMelody';
-//import { MusicProvider } from './MusicContext';
-//import MusicProvider from './MusicContext'
+import UserAccount from './components/UserAccount/UserAccount';
 
 class App extends Component {
   state = { 
@@ -71,6 +70,7 @@ render() {
           <Route path={'/jammin'} component={Jam} />
 
           <PrivateRoute path={'/save'} component={SaveMelody} />
+          <PrivateRoute path={'/user'} component={UserAccount} />
           
         <Users />
       </div>

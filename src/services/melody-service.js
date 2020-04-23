@@ -2,6 +2,15 @@ import config from '../config'
 
 
 const MelodyService = {
+  getMelodies() {
+    return fetch(`${config.API_ENDPOINT}/melodies`, {
+    })
+    .then(res =>
+      (!res.ok)
+        ? res.json().then(e => Promise.reject(e))
+        : res.json()
+        )
+  },
   postMelody(details) {
     return fetch (`${config.API_ENDPOINT}/melodies`, {
       method: 'POST',

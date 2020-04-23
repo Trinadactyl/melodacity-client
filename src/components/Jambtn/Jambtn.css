@@ -1,5 +1,6 @@
 .Jambtn {
   width: 15vw;
   height: 10vh;
-  background-color: rgb(105, 168, 42) ;
+  background-color: rgb(105, 168, 42);
+  border-radius: 20%;
 }

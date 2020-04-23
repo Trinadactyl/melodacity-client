@@ -31,10 +31,12 @@ export default function Header () {
       <Link to='/'>
         <h1>Melodactity!</h1>
       </Link>
-      
-      <button className='settings-button'>
-        [insert settings icon]
-      </button>
+
+      <Link to='/user'>
+        <button className='settings-button'>
+          Go to my account
+        </button>
+      </Link>
     </header>
     
   </>

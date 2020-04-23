@@ -11,10 +11,7 @@ export default function PrivateRoute({ component, ...props }) {
         TokenService.hasAuthToken()
         ? <Component {...componentProps} />
         : <Redirect 
-            t0={{
-              pathname: '/login',
-              state: { from: componentProps.location }
-            }}
+            to={'/login'}
           />
       )}
     /> 

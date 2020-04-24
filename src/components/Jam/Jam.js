@@ -23,7 +23,7 @@ export default class Jam extends Component {
     return key
   }
 
-  renderChordButtons() {
+  // renderChordButtons() {
   //   const majorScales = { 
   //     'A': ['A','B','Db','D','E','Gb','Ab','A'],
   //     'Ab': ['Ab','Bb','C','Db','Eb','F','G','Ab'],
@@ -52,33 +52,32 @@ export default class Jam extends Component {
   //   'G': ['G','A','B','C','D','E','Gb','G'],
   //   'Gb': ['Gb','Ab','Bb','Cb','Db','Eb','F','Gb'],
   // }
-    // if (this.context.tonic === 'minor') {
-    //   const prog = minorScales.toArray()
+  //   if (this.context.tonic === 'minor') {
+  //     const prog = minorScales.toArray()
 
-    //   console.log(prog)
-    //   return prog
-    // } else {
-    //   const prog = majorScales.toArray()
-    //   console.log(prog)
-    //   return prog
-    // }
-    return
-  }
-
-  // handleSetMelody() {
-  //   const someMelody = someScale[1]
-  //   console.log('current prog', prog, typeof(prog))
-  //   console.log('scale', someScale)
-  //   console.log('melody', someMelody)
-  //   this.context.setMelody(someMelody)
-  //   //return
+  //     console.log(prog)
+  //     return prog
+  //   } else {
+  //     const prog = majorScales.toArray()
+  //     console.log(prog)
+  //     return prog
+  //   }
+  //   return
   // }
 
-    render() {
-        //const prog = this.context.prog
-        //const someScale = ['C','D','E','F','G','A','B','C']
-        //const someMelody = someScale[1]
+  handleSetMelody() {
+    const prog = this.context.prog
+    const someScale = ['C','D','E','F','G','A','B','C']
+    const someMelody = someScale[1]
+    console.log('current prog', prog, typeof(prog))
+    console.log('scale', someScale)
+    console.log('melody', someMelody)
+    this.context.setMelody(someMelody)
+    //return
+  }
 
+    render() {
+      //const melody = ['A', 'B', 'C']
       return (
         <>
         <div className='jam-header'>
@@ -87,10 +86,10 @@ export default class Jam extends Component {
             <h2>Key: {this.displayKey()}</h2>
         </div>
         <div className='chords'>
-          {this.renderChordButtons()}
+          {}
         </div>
 
-        <button>Click to set a melody</button>
+        <button onClick={this.handleSetMelody}>Click to set a melody</button>
 
         <div className='controls'>
           <button>Record</button>

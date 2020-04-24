@@ -6,7 +6,10 @@ import MelodyService from '../services/melody-service'
 export default class SaveMelody extends Component {
   static contextType = MusicProvider
 
-  state = { error: null }
+  state = { 
+    error: null,
+    submitted: false
+  }
 
   handleSubmitMelodyForm = ev => {
     ev.preventDefault()
@@ -23,7 +26,16 @@ export default class SaveMelody extends Component {
       .then(res => {
         title.value = ''
       })
-    console.log('Submit is being handled!')
+    this.setState({ submitted: true })
+  }
+
+  renderSubmitStatus() {
+    if(this.state.submitted){
+      return (
+       <p>Melody Saved!</p> 
+      )
+    }
+    return
   }
 
 
@@ -45,6 +57,7 @@ export default class SaveMelody extends Component {
           <p>Key: {key}</p>
           <p>Progression: {prog}</p>
         </div>
+        {this.renderSubmitStatus()}
         <Link to='/jammin'>
           <button>Back</button>
         </Link>

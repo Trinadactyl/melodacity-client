@@ -24,15 +24,9 @@ componentDidMount() {
       })
   }
 
-  // renderMelodies() {
-  //   this.state.melodies.forEach(melody => {
-  //     return (
-  //       <div>
-  //         {melody.title}
-  //       </div>
-  //     )
-  //   });
-  //}
+  // handleDeleteMelody() {
+
+  // }
 
   render(){
 
@@ -54,5 +48,4 @@ componentDidMount() {
       </>
     )
   }
-
 }

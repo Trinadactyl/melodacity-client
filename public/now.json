@@ -1,0 +1,8 @@
+{
+  "version": 2,
+  "name": "melodacity",
+  "routes": [
+      { "handle": "filesystem" },
+      { "src": "/.*", "dest": "/index.html" }
+  ]
+}

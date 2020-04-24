@@ -47,9 +47,9 @@ export default class Users extends Component {
   renderLoginLink() {
       return (
         <div className='user-not-logged-in'>
-          <Link to='/login'>Login</Link>
+          <Link to='/login'>Login </Link>
           |
-          <Link to='/register'>Register</Link>
+          <Link to='/register'> Register</Link>
         </div>
       )
   }

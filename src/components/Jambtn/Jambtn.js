@@ -8,7 +8,7 @@ export default class Jambtn extends Component {
  
   render() {
     return (
-    <Link to='/key'>
+    <Link to='/select-key'>
       <button className='Jambtn'> 
           JAM!        
       </button>

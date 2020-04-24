@@ -38,7 +38,7 @@ export default class ProgSelect extends Component {
         <button className='prog' onClick={() => this.context.setProg([1, 4, 1, 5, 1])}>I-IV-I-V-I</button>
 
         <nav>
-          <Link to={'/key'}>
+          <Link to={'/select-key'}>
             <button className='nav'>Back</button>
           </Link>
           

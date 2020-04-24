@@ -39,7 +39,7 @@ export default class KeySelect extends Component {
           <Link to='/'>
             <button className='nav'>Back</button>
           </Link>
-         <Link to='/progression'>
+         <Link to='/select-progression'>
            <button className='nav'>Next</button>
          </Link>
         </nav>

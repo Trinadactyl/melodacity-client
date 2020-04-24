@@ -65,8 +65,8 @@ render() {
           <PublicRoute path={'/login'} component={LoginPage} />
           <PublicRoute path={'/register'} component={RegistrationForm} />
                   
-          <Route path={'/key'} component={KeySelect} />
-          <Route path={'/progression'} component={ProgSelect} />
+          <Route path={'/select-key'} component={KeySelect} />
+          <Route path={'/select-progression'} component={ProgSelect} />
           <Route path={'/jammin'} component={Jam} />
 
           <PrivateRoute path={'/save'} component={SaveMelody} />

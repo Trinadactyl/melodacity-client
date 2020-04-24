@@ -4,3 +4,18 @@
   border-radius: 20%;
   margin: 20px;
 }
+
+.controls {
+  border: solid 2px;
+  padding: 2%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.ctrls {
+  margin: 4px;
+  height: 2em;
+  width: auto;
+  border-radius: 10%;
+  background-color: rgb(185, 122, 207);
+}

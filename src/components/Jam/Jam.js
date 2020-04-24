@@ -12,7 +12,7 @@ export default class Jam extends Component {
     if(prog.length < 1) {
       return 'Please choose a progression'
     }
-    return prog
+    return prog.join('-')
   };
 
   displayKey() {
@@ -89,16 +89,15 @@ export default class Jam extends Component {
           {}
         </div>
 
-        <button onClick={this.handleSetMelody}>Click to set a melody</button>
-
         <div className='controls'>
-          <button>Record</button>
-          <button>Stop</button>
-          <button>Play</button>
+          <p>Coming Soon!</p>
+          <button className='ctrls'>Record</button>
+          <button className='ctrls'>Stop</button>
+          <button className='ctrls'>Play</button>
         </div>
 
         <nav>
-          <Link to='/progression'>
+          <Link to='/select-progression'>
            <button className='nav'>Back</button>
           </Link> 
           <Link to='/save'>

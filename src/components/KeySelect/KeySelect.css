@@ -22,8 +22,9 @@
 }
 
 .nav {
-  height: 6em;
-  width: 7em;
+  background-color: #9A7BBE;
+  height: 3em;
+  width: 4em;
   border-radius: 20%;
   margin: 20px;
 }

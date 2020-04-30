@@ -38,7 +38,7 @@ export class MusicProvider extends Component {
   }
 
   setMelody = melody => {
-    this.setState({ melody: melody})
+    this.setState({ melody: melody })
   }
 
   render() {

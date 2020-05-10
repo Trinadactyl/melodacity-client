@@ -42,7 +42,7 @@ export default class Jam extends Component {
   displayProg() {
     const prog = this.context.prog
     if(prog.length < 1) {
-      return 'No progression was selected'
+      return 'No progression is selected'
     }
     return prog.join('-')
   };
@@ -50,7 +50,7 @@ export default class Jam extends Component {
   displayTonic() {
     const tonic = this.context.tonic
     if (tonic === '') {
-      return 'No tonic was selected'
+      return 'No tonic is selected'
     }
     return tonic
   }
@@ -58,7 +58,7 @@ export default class Jam extends Component {
   displayKey() {
     const key = this.context.key
     if (key === '') {
-      return 'No key was selected'
+      return 'No key is selected'
     }
     return key
   };
@@ -81,6 +81,20 @@ export default class Jam extends Component {
     return this.getNoteIndexes(scale, prog)
   }
 
+  renderChordButtons() {
+    const key = this.context.key
+    const tonic = this.context.tonic
+    const prog = this.context.prog
+    const chordArr = this.getKeySpecificProgression(key, tonic, prog)
+    chordArr.map(chord => {
+      return (
+        <button>{chord}</button>
+      )
+    })
+    console.log('chordArr: ',chordArr)
+    console.log("rendering chord buttons")
+  }
+
   
   // handleSetMelody() {
   //   // const prog = this.context.prog
@@ -96,6 +110,8 @@ export default class Jam extends Component {
     const tonic = this.context.tonic
     const prog = this.context.prog
 
+    //const chords = this.getKeySpecificProgression(key, tonic, prog)
+
     return (
       <>
       <div className='jam-header'>
@@ -106,8 +122,9 @@ export default class Jam extends Component {
                  
       </div>
       <div className='chords'>
-        {console.log("getNoteIndexes(majorScales[C], [1,4,5]):",this.getNoteIndexes(majorScales["C"], [1,4,5]))}
+        {this.renderChordButtons()}
        <p>{this.getKeySpecificProgression(key ,tonic, prog)}</p> 
+       
       </div>
 
       <div className='controls'>

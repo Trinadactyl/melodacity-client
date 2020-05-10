@@ -11,18 +11,32 @@ export default class UserAccount extends Component {
   }
 
 componentDidMount() {
-    MelodyService
-      .getMelodies()
-      .then(melodies => {
-        console.log(melodies)  
-        this.setState({
-            melodies: melodies
-          })
-        melodies.forEach(melody => {
-          console.log(melody.title)        
-        });
-      })
-  }
+  const userId = localStorage.getItem('userId')
+  MelodyService
+    .getMelodies(userId)
+    .then(melodies => { 
+      this.setState({
+          melodies: melodies
+        })
+        //console.log('state',this.state)
+    })
+}
+
+renderUserMelodies() {
+  const melodies = this.state.melodies;
+  console.log('melodies var:', melodies);
+  for (let melody in melodies) {
+    return (
+    <div className='melody-div'>
+      <p>{melodies.title}</p>
+      <p>Key: {melodies.music_key}</p>
+      <p>Tonic: {melodies.tonic}</p>
+      <p>progression: {melodies.progression}</p>
+      <button>Delete</button>
+    </div> 
+    )
+  }   
+}
 
   // handleDeleteMelody() {
 
@@ -31,20 +45,13 @@ componentDidMount() {
   render(){
 
     const userName = localStorage.getItem('userName')
-    const melody = this.state.melodies.map(melody => 
-      <div className='melody-box'>
-        <p>{melody.title}</p>
-        <p>Key: {melody.music_key}</p>
-        <p>Tonic: {melody.tonic}</p>
-        <p>progression: {melody.progression}</p>
-        <button>Delete</button>
-      </div> )
+
 
     return (
       <>
         <h1>Hello {userName}</h1>
         <h2>My Melodies</h2>
-        {melody}
+        {this.renderUserMelodies()}
       </>
     )
   }

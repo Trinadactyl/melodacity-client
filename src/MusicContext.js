@@ -26,7 +26,6 @@ export class MusicProvider extends Component {
 
   setKey = key => {
     this.setState({ key: key })
-    console.log(this.state.key)
   }
 
   setTonic = tonic => {

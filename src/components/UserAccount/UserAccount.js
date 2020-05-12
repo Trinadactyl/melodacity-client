@@ -6,41 +6,50 @@ import './UserAccount.css'
 export default class UserAccount extends Component {
   static contextType = AppContext 
 
-  state = {
-    melodies: []
+  constructor(props) {
+    super(props);
+     this.state = {
+      melodies: []
+    }
   }
-
+ 
+//make request for specific users's melodies
 componentDidMount() {
   const userId = localStorage.getItem('userId')
   MelodyService
-    .getMelodies(userId)
+    .getUserSpecificMelodies(userId)
     .then(melodies => { 
-      this.setState({
-          melodies: melodies
-        })
-        //console.log('state',this.state)
+      this.setState({melodies : melodies})
+        console.log('state',this.state)
     })
 }
 
+//display the details of each melody within an element
 renderUserMelodies() {
   const melodies = this.state.melodies;
   console.log('melodies var:', melodies);
-  for (let melody in melodies) {
-    return (
-    <div className='melody-div'>
-      <p>{melodies.title}</p>
-      <p>Key: {melodies.music_key}</p>
-      <p>Tonic: {melodies.tonic}</p>
-      <p>progression: {melodies.progression}</p>
-      <button>Delete</button>
-    </div> 
-    )
-  }   
+
+  const melodiesList = melodies.map((melody, i) =>
+<li key={i}>{melody.title} key:{melody.music_key}</li>)
+
+  return (
+    <ol className='melody-list'> 
+      {melodiesList}
+    </ol> 
+  );
 }
 
-  // handleDeleteMelody() {
 
-  // }
+
+// {melodies.title}
+// Key: {melodies.music_key}
+// Tonic: {melodies.tonic}
+// progression: {melodies.progression}
+
+
+// handleDeleteMelody() {
+
+// }
 
   render(){
 

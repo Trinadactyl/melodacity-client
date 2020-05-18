@@ -5,9 +5,7 @@ import './Header.css';
 
 export default function Header () {
 
- 
   return <>
-    
     <header className='header'>
       <Link to='/'>
         <h1>Melodactity!</h1>
@@ -18,6 +16,17 @@ export default function Header () {
           View all the Melodies!
         </button>
       </Link>
+
+      {/* <select for='nav'> 
+      <Link to='/user'>
+        <option className='account-page'>
+          My Account
+        </option>
+      </Link>
+        <option>Select Key</option>
+        <option>Select Progression</option>
+        <option>Jam!</option>
+      </select> */}
     </header>
     
   </>

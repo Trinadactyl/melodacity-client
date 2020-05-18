@@ -30,7 +30,7 @@ renderUserMelodies() {
   console.log('melodies var:', melodies);
 
   const melodiesList = melodies.map((melody, i) =>
-<li key={i}>{melody.title} key:{melody.music_key}</li>)
+    <li key={i}>{melody.title} key:{melody.music_key}</li>)
 
   return (
     <ol className='melody-list'> 
@@ -39,13 +39,10 @@ renderUserMelodies() {
   );
 }
 
-
-
 // {melodies.title}
 // Key: {melodies.music_key}
 // Tonic: {melodies.tonic}
 // progression: {melodies.progression}
-
 
 // handleDeleteMelody() {
 

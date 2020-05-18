@@ -12,7 +12,7 @@ import KeySelect from './components/KeySelect/KeySelect';
 import ProgSelect from './components/ProgSelect/ProgSelect';
 import Jam from './components/Jam/Jam';
 import RegistrationForm from './components/RegistrationForm/RegistrationForm';
-//import UsersApiService from './services/user-api-service'
+import UsersApiService from './services/user-api-service'
 import LoginPage from './components/LoginPage/LoginPage';
 import TokenService from './services/token-service';
 
@@ -37,13 +37,13 @@ updateUserName = (userName) => {
   })
 }
 
-// componentDidMount() {
-//   UsersApiService
-//     .getUsers()
-//     .then(users => {
-//      console.log(users)
-//     })
-// }
+componentDidMount() {
+  UsersApiService
+    .getUsers()
+    .then(users => {
+     console.log(users)
+    })
+}
 
 render() {
   const value = {

@@ -9,11 +9,30 @@ export default class KeySelect extends Component {
 
   static contextType = MusicProvider
 
+  displaySelections = () => {
+    return (
+    <>
+      <h2>Selected Key: {this.context.key}</h2>
+      <h2>Selected Tonic: {this.context.tonic}</h2>
+    </>
+    )
+  }
+
+  verifySelections = () => {
+    if (this.context.key === '') {
+      alert('Please select a key')
+    } else if (this.context.tonic === '') {
+      alert('Please select a tonic')
+    }
+    return;
+  }
+
 
   render () {
     return (
       <>
         <h1>Choose a Key</h1>
+        {this.displaySelections()}
 
         <div className='key-select'>  
           <button className='key' onClick={()=> this.context.setKey('A')}>A</button>
@@ -34,13 +53,13 @@ export default class KeySelect extends Component {
           <button className='tonic' onClick={()=> this.context.setTonic('Major')}>Major</button>
           <button className='tonic' onClick={()=> this.context.setTonic('Minor')}>Minor</button>
         </div>
-
+        
         <nav>
           <Link to='/'>
             <button className='nav'>Back</button>
           </Link>
          <Link to='/select-progression'>
-           <button className='nav'>Next</button>
+           <button className='nav' >Next</button>
          </Link>
         </nav>
   

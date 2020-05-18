@@ -22,10 +22,22 @@ export default class ProgSelect extends Component {
   //   }))
   // }
 
+  displaySelections = () => {
+    return (
+      <>
+        <h2>Selected Key: {this.context.key}</h2>
+        <h2>Selected Tonic: {this.context.tonic}</h2>
+        <h2>Selected Progression: {this.context.prog}</h2>       
+      </>
+    )
+  }
+
+
   render(){
     return (
       <div className='progressions'>
         <h1>Choose a progression</h1>
+        {this.displaySelections()}
         <button className='prog' onClick={() => this.context.setProg([1, 4, 5])}>I-IV-V</button>
         <button className='prog' onClick={() => this.context.setProg([1, 4, 7])}>I-IV-VII</button>
         <button className='prog' onClick={() => this.context.setProg([1, 6, 7])}>I-VI-VII</button>

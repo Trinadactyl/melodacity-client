@@ -17,6 +17,7 @@ export default function Header () {
         </button>
       </Link>
 
+{/* Nav select bar */}
       {/* <select for='nav'> 
       <Link to='/user'>
         <option className='account-page'>

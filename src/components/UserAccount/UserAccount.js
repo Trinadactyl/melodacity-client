@@ -51,8 +51,7 @@ renderUserMelodies() {
   render(){
 
     const userName = localStorage.getItem('userName')
-
-
+    
     return (
       <>
         <h1>Hello {userName}</h1>

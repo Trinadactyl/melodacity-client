@@ -71,7 +71,7 @@ export default class RegistrationForm extends Component {
       </label>
       <input
         name='confirm-password'
-        type='confirm-password'
+        type='password'
         required
         id='RegistrationForm__confirm-password'>
       </input>

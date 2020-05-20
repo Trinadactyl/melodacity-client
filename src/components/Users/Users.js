@@ -11,24 +11,10 @@ export default class Users extends Component {
 
   static contextType = AppContext
   
-  // constructor(props) {
-  //   super(props)
-  //     this.state = {
-  //     userName: localStorage.userName,
-  //   }
-  // }
-
-  // getUserName = () => {
-  //   const userName = localStorage.getItem('userName');
-  //   this.setState({userName: userName})
-  //   }  
-
     handleLogoutClick = () => {
     TokenService.clearAuthToken()
     this.context.updateIsLoggedIn()
     this.context.updateUserName()
-    //refreshing the page
-    //window.location.reload(false)
     }
 
   renderLogoutLink() {
@@ -49,7 +35,8 @@ export default class Users extends Component {
         <div className='user-not-logged-in'>
           <Link to='/login'>Login </Link>
           |
-          <Link to='/register'> Register</Link>
+          {/* <Link to='/register'> Register</Link> */}
+          <span> Register (Coming soon!)</span>
         </div>
       )
   }

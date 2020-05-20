@@ -35,8 +35,8 @@ export default class Users extends Component {
         <div className='user-not-logged-in'>
           <Link to='/login'>Login </Link>
           |
-          {/* <Link to='/register'> Register</Link> */}
           <span> Register (Coming soon!)</span>
+          {/* <Link to='/register'> Register</Link> */}
         </div>
       )
   }

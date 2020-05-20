@@ -12,9 +12,9 @@ Progress board: https://trello.com/b/wHnyMjOi/capstone-1
 
 :musical_note: Select a key and a progression, then see the notes and chords it contains
 
-:musical_note: Press the buttons to hear sounds and create melodies
+:musical_note: (In progress) Press the buttons to hear sounds and create melodies
 
-:musical_note: Record a melody and play it back!
+:musical_note: (In progress) Record a melody and play it back!
 
 :musical_keyboard: **With an account, I can:**
 

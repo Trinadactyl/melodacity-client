@@ -18,4 +18,32 @@
   width: auto;
   border-radius: 10%;
   background-color: rgb(185, 122, 207);
+ 
+}
+
+.chords {
+  border: solid 3px black;
+  height: auto;
+  width: 50%;
+  margin: 2em;
+  padding: 2em; 
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.chordlist {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.chord-btn{
+  height: 4em;
+  width: 4em;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 50%;
+  background-color: rgb(105, 168, 42) ;
+  color: black
 }

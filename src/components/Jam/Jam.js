@@ -81,21 +81,28 @@ export default class Jam extends Component {
     return this.getNoteIndexes(scale, prog)
   }
 
-  renderChordButtons() {
-    const key = this.context.key
-    const tonic = this.context.tonic
-    const prog = this.context.prog
+  renderChordButtons(key, tonic, prog) {
+    // const key = this.context.key
+    // const tonic = this.context.tonic
+    // const prog = this.context.prog
+
     const chordArr = this.getKeySpecificProgression(key, tonic, prog)
-    chordArr.map(chord => {
-      return (
-        <button>{chord}</button>
-      )
-    })
+    const chordList = chordArr.map((chord, i) => 
+      <li key={i}> 
+        <button className='chord-btn'>
+          {chord}
+        </button>
+      </li> )
     console.log('chordArr: ',chordArr)
     console.log("rendering chord buttons")
+    return (
+      <ul className='chordlist'>
+        {chordList}
+      </ul>
+    )
+
   }
 
-  
   // handleSetMelody() {
   //   // const prog = this.context.prog
   //   // const key = this.context.key
@@ -110,21 +117,21 @@ export default class Jam extends Component {
     const tonic = this.context.tonic
     const prog = this.context.prog
 
+    //console.log(key, tonic, prog)
     //const chords = this.getKeySpecificProgression(key, tonic, prog)
-
+    //{this.renderChordButtons(key, tonic, prog)}
     return (
       <>
       <div className='jam-header'>
         <h1>Let's Jam!</h1>
         <h2>Key: {this.displayKey()}</h2>
         <h2>Tonic: {this.displayTonic()}</h2>
-        <h2>Progression: {this.displayProg()}</h2>
-                 
+        <h2>Progression: {this.displayProg()}</h2>        
       </div>
+      
       <div className='chords'>
-        {this.renderChordButtons()}
-       <p>{this.getKeySpecificProgression(key ,tonic, prog)}</p> 
-       
+        <h2>SHOW YOURSELF DAMMIT</h2>
+        {this.renderChordButtons(key, tonic, prog)}
       </div>
 
       <div className='controls'>

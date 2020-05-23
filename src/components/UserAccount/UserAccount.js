@@ -58,8 +58,8 @@ renderUserMelodies() {
       <>
         <h1>Hello {userName}</h1>
         <h2>My Melodies</h2>
-        {this.state.melodies === [] 
-        ? <span>You don't have any melodies!</span>
+        {this.state.melodies.length === 0 
+        ? <span>You don't have any melodies saved!</span>
         : this.renderUserMelodies()}
       </>
     )

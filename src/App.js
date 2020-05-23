@@ -41,7 +41,7 @@ componentDidMount() {
   UsersApiService
     .getUsers()
     .then(users => {
-     console.log(users)
+     console.log('users:', users)
     })
 }
 

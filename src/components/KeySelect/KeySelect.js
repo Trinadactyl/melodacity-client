@@ -59,7 +59,7 @@ export default class KeySelect extends Component {
             <button className='nav'>Back</button>
           </Link>
          <Link to='/select-progression'>
-           <button className='nav' >Next</button>
+           <button className='nav' onClick={this.verifySelections}>Next</button>
          </Link>
         </nav>
   

@@ -39,6 +39,13 @@ import './Jam.css'
 export default class Jam extends Component {
   static contextType = MusicProvider
 
+  componentDidMount() {
+    //redirect user to main page if no selections were made
+    if (this.context.key === '' && this.context.tonic === '' && this.context.prog === []) {
+      this.props.history.push('/')
+    }
+  }
+
   displayProg() {
     const prog = this.context.prog
     if(prog.length < 1) {
@@ -130,7 +137,6 @@ export default class Jam extends Component {
       </div>
       
       <div className='chords'>
-        <h2>SHOW YOURSELF DAMMIT</h2>
         {this.renderChordButtons(key, tonic, prog)}
       </div>
 

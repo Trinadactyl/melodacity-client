@@ -13,7 +13,7 @@ export default function Header () {
 
       <Link to='/user'>
         <button className='melodies-button'>
-          View all the Melodies!
+          My Melodies
         </button>
       </Link>
 

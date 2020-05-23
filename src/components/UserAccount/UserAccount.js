@@ -27,16 +27,18 @@ componentDidMount() {
 //display the details of each melody within an element
 renderUserMelodies() {
   const melodies = this.state.melodies;
-  console.log('melodies var:', melodies);
+  console.log('melodies:', melodies);
 
   const melodiesList = melodies.map((melody, i) =>
-    <li key={i}>{melody.title} key:{melody.music_key}</li>)
+    <li key={i}><div className='melody-list-item'>
+      {melody.title} key:{melody.music_key}
+      </div></li>)
 
-  return (
-    <ol className='melody-list'> 
-      {melodiesList}
-    </ol> 
-  );
+    return (
+      <ol className='melody-list'> 
+        {melodiesList}
+      </ol> 
+    );
 }
 
 // {melodies.title}
@@ -56,7 +58,9 @@ renderUserMelodies() {
       <>
         <h1>Hello {userName}</h1>
         <h2>My Melodies</h2>
-        {this.renderUserMelodies()}
+        {this.state.melodies === [] 
+        ? <span>You don't have any melodies!</span>
+        : this.renderUserMelodies()}
       </>
     )
   }

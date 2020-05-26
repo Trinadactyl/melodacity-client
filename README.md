@@ -24,12 +24,12 @@ Progress board: https://trello.com/b/wHnyMjOi/capstone-1
 
 :musical_note: Delete my recordings
 
-![Main Page](./src/screenshots/main.png)
-![Select a key](./src/screenshots/key-select.png)
-![Select a progression](./src/screenshots/prog-select.png)
-![Make some music!](./src/screenshots/jam-page.png)
-![Title your melody](./src/screenshots/save.png)
-![See all your saved melodies](./src/screenshots/melody-list.png)
+![Main Page](./src/screenshots/main-small.png)
+![Select a key](./src/screenshots/key-select-small.png)
+![Select a progression](./src/screenshots/prog-select-small.png)
+![Make some music!](./src/screenshots/jam-page-small.png)
+![Title your melody](./src/screenshots/save-small.png)
+![See all your saved melodies](./src/screenshots/melody-list-small.png)
 
 **************************************************************
 

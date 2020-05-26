@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import MusicProvider from '../MusicContext';
 import { Link } from 'react-router-dom';
-import MelodyService from '../services/melody-service'
+import MelodyService from '../services/melody-service';
+import './SaveMelody.css'
 
 export default class SaveMelody extends Component {
   static contextType = MusicProvider
@@ -59,9 +60,9 @@ export default class SaveMelody extends Component {
         </div>
         {this.renderSubmitStatus()}
         <Link to='/jammin'>
-          <button>Cancel</button>
+          <button className='btn'>Cancel</button>
         </Link>
-        <button type='submit'>
+        <button className='btn' type='submit'>
           Submit
         </button>
       </form>

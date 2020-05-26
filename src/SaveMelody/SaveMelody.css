@@ -1,0 +1,19 @@
+.btn {
+  font-size: 20px;
+  margin: 5px;
+  height: 2em;
+  width: auto;
+  border-radius: 10%;
+  background-color: rgb(185, 122, 207);
+}
+
+.details {
+  color: aliceblue;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+label[for='title'] {
+  color: aliceblue;
+  font-size: 25px;
+}

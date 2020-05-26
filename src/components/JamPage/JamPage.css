@@ -6,13 +6,15 @@
 }
 
 .controls {
+  font-size: 30px;
   border: solid 2px;
   padding: 2%;
   margin-left: 10%;
   margin-right: 10%;
 }
 
-.ctrls {
+.ctrl-btns {
+  font-size: 20px;
   margin: 4px;
   height: 2em;
   width: auto;

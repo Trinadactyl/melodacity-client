@@ -142,9 +142,9 @@ export default class Jam extends Component {
 
       <div className='controls'>
         <p>Coming Soon!</p>
-        <button className='ctrls'>Record</button>
-        <button className='ctrls'>Stop</button>
-        <button className='ctrls'>Play</button>
+        <button className='ctrl-btns'>Record</button>
+        <button className='ctrl-btns'>Stop</button>
+        <button className='ctrl-btns'>Play</button>
       </div>
 
       <nav>

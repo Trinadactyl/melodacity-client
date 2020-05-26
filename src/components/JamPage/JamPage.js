@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import MusicProvider from '../../MusicContext';
 //import musicStore from '../../musicStore';
-import './Jam.css'
+import './JamPage.css'
 
     //each key and its major scale
     const majorScales = { 
@@ -136,7 +136,7 @@ export default class Jam extends Component {
         <h2>Progression: {this.displayProg()}</h2>        
       </div>
       
-      <div className='chords'>
+      <div className='chord-container'>
         {this.renderChordButtons(key, tonic, prog)}
       </div>
 

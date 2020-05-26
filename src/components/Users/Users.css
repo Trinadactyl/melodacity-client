@@ -5,3 +5,7 @@
 .greeting {
   margin: 4px;
 }
+
+.user-links a {
+  color: aliceblue;
+}

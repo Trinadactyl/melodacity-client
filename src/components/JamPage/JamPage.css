@@ -21,8 +21,8 @@
  
 }
 
-.chords {
-  border: solid 3px black;
+.chord-container {
+  /* border: solid 3px black; */
   height: auto;
   width: 50%;
   margin: 2em;
@@ -39,11 +39,14 @@
 }
 
 .chord-btn{
+  font-size: inherit;
+  font-weight: bold;
   height: 4em;
   width: 4em;
   padding: 5px;
   margin: 5px;
   border-radius: 50%;
+  border: solid black 1px;
   background-color: rgb(105, 168, 42) ;
   color: black
 }

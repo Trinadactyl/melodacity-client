@@ -2,12 +2,15 @@
   padding: 20px;
 }
 
-.key {
+.key-btns {
   height: 4em;
   width: 4em;
+  font-size: inherit;
+  font-weight: bold;
   padding: 5px;
   margin: 5px;
   border-radius: 50%;
+  border: solid black 1px;
   background-color: rgb(105, 168, 42) ;
   color: black
 }
@@ -15,16 +18,22 @@
 .tonic {
   height: 3em;
   width: 5em;
+  font-size: inherit;
+  font-weight: bold;
   padding: 5px;
   margin: 5px;
   border-radius: 40%;
+  border: solid black 1px;
   background-color: rgb(85, 170, 0);
 }
 
 .nav {
   background-color: #9A7BBE;
-  height: 3em;
-  width: 4em;
+  height: auto;
+  width: auto;
+  font-size: inherit;
+  font-weight: bold;
   border-radius: 20%;
   margin: 20px;
+  border: solid black 1px;
 }

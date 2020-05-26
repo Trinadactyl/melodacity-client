@@ -1,16 +1,28 @@
-.prog {
+.prog-btns {
+  height: 4em;
+  width: auto;
+  font-size: inherit;
+  font-weight: bold;
   padding: 5px;
   margin: 5px;
-  border-radius: 50%;
-  background-color: rgb(105, 168, 42);
-  font-size: 14px;
-  height: 4em;
-  width: 4em;
-  color: black;
-  border: magenta 6px;
+  border-radius: 60%;
+  border: solid black 1px;
+  background-color: rgb(105, 168, 42) ;
+  color: black
 }
 
+.progressions {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
 .nav {
+  background-color: #9A7BBE;
+  height: auto;
+  width: auto;
+  font-size: inherit;
+  font-weight: bold;
   border-radius: 20%;
   margin: 20px;
+  border: solid black 1px;
 }

@@ -10,7 +10,7 @@ import Jambtn from './components/Jambtn/Jambtn';
 import Users from './components/Users/Users';
 import KeySelect from './components/KeySelect/KeySelect';
 import ProgSelect from './components/ProgSelect/ProgSelect';
-import Jam from './components/Jam/Jam';
+import JamPage from './components/JamPage/JamPage';
 import RegistrationForm from './components/RegistrationForm/RegistrationForm';
 import UsersApiService from './services/user-api-service'
 import LoginPage from './components/LoginPage/LoginPage';
@@ -67,7 +67,7 @@ render() {
                   
           <Route path={'/select-key'} component={KeySelect} />
           <Route path={'/select-progression'} component={ProgSelect} />
-          <Route path={'/jammin'} component={Jam} />
+          <Route path={'/jammin'} component={JamPage} />
 
           <PrivateRoute path={'/save'} component={SaveMelody} />
           <PrivateRoute path={'/user'} component={UserAccount} />

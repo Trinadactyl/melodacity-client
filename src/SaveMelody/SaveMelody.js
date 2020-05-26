@@ -59,7 +59,7 @@ export default class SaveMelody extends Component {
         </div>
         {this.renderSubmitStatus()}
         <Link to='/jammin'>
-          <button>Back</button>
+          <button>Cancel</button>
         </Link>
         <button type='submit'>
           Submit

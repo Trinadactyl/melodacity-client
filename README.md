@@ -2,17 +2,15 @@
 
 https://melodacity.now.sh/
 
-A fun app for musicians, songwriters, and those who like to create stuff.
+A fun app for musicians, songwriters, and other people.
 
-:musical_note: Select a key and a progression, then see the chords it contains
+:musical_note: Generate a selection of chords that "go well together"
 
-:musical_note: (In progress) Press the buttons to hear sounds and create melodies
+:musical_note: (**IN PROGRESS**) Play and record simple melodies
 
-:musical_note: (In progress) Record a melody and play it back!
+:musical_note: Save recordings to hear them later
 
-:musical_note: Save recordings to hear them again later
-
-:musical_note: View all my previous recordings on my personal profile
+:musical_note: View previous recordings on profile
 
 **************************************************************
 

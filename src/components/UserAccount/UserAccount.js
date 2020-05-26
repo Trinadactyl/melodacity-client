@@ -24,6 +24,11 @@ export default class UserAccount extends Component {
       })
   }
 
+  handleDeleteClick = () => {
+    alert(`You can't delete this right now.`)
+
+  }
+
   //display the details of each melody within an element
   renderUserMelodies() {
     const melodies = this.state.melodies;
@@ -32,7 +37,7 @@ export default class UserAccount extends Component {
     const melodiesList = melodies.map((melody, i) =>
       <li key={i}>
         <div className='melody-list-item'>
-          {i}.<button className='delete-btn'>Delete</button>
+          {i+1}.<button className='delete-btn' onClick={this.handleDeleteClick}>Delete</button>
           <p>{melody.title}</p>
           <p>key: {melody.music_key}</p>
           <p>progression: {melody.progression}</p>

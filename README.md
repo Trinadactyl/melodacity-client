@@ -2,10 +2,7 @@
 
 https://melodacity.now.sh/
 
-An app designed for musicians, songwriters, and those who like to create stuff.
- 
-
-:musical_note: Create an account/login or simply create without saving.
+A fun app for musicians, songwriters, and those who like to create stuff.
 
 :musical_note: Select a key and a progression, then see the chords it contains
 

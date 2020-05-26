@@ -30,9 +30,15 @@ export default class UserAccount extends Component {
     console.log('melodies:', melodies);
 
     const melodiesList = melodies.map((melody, i) =>
-      <li key={i}><div className='melody-list-item'>
-        {melody.title} key:{melody.music_key}
-      </div></li>)
+      <li key={i}>
+        <div className='melody-list-item'>
+          {i}.<button className='delete-btn'>Delete</button>
+          <p>{melody.title}</p>
+          <p>key: {melody.music_key}</p>
+          <p>progression: {melody.progression}</p>
+          
+        </div>
+      </li>)
 
     return (
       <ol className='melody-list'>

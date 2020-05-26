@@ -1,4 +1,16 @@
 .melody-list {
-  border: solid black 3px;
+  list-style-type: none;
+  color: aliceblue;
   margin: 4em;
+}
+
+.melody-list-item {
+  padding: 10px;
+  border: solid black 3px;
+  margin: 10px;
+  text-align: left;
+}
+
+.delete-btn {
+  float: right;
 }

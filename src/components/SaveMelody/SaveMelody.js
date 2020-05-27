@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import MusicProvider from '../MusicContext';
+import MusicProvider from '../../MusicContext';
 import { Link } from 'react-router-dom';
-import MelodyService from '../services/melody-service';
+import MelodyService from '../../services/melody-service';
 import './SaveMelody.css'
 
 export default class SaveMelody extends Component {

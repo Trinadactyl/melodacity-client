@@ -1,23 +1,23 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
-import { AppContext } from './AppContext';
-import { MusicProvider } from './MusicContext';
+import { AppContext } from '../../AppContext';
+import { MusicProvider } from '../../MusicContext';
 import './App.css';
-import Header from './components/Header/Header';
-import PrivateRoute from './components/Utils/PrivateRoute';
-import PublicRoute from './components/Utils/PublicRoute';
-import Jambtn from './components/Jambtn/Jambtn';
-import Users from './components/Users/Users';
-import KeySelect from './components/KeySelect/KeySelect';
-import ProgSelect from './components/ProgSelect/ProgSelect';
-import JamPage from './components/JamPage/JamPage';
-import RegistrationForm from './components/RegistrationForm/RegistrationForm';
-import UsersApiService from './services/user-api-service'
-import LoginPage from './components/LoginPage/LoginPage';
-import TokenService from './services/token-service';
+import Header from '../Header/Header';
+import PrivateRoute from '../Utils/PrivateRoute';
+import PublicRoute from '../Utils/PublicRoute';
+import Jambtn from '../Jambtn/Jambtn';
+import Users from '../Users/Users';
+import KeySelect from '../KeySelect/KeySelect';
+import ProgSelect from '../ProgSelect/ProgSelect';
+import JamPage from '../JamPage/JamPage';
+import RegistrationForm from '../RegistrationForm/RegistrationForm';
+import UsersApiService from '../../services/user-api-service'
+import LoginPage from '../LoginPage/LoginPage';
+import TokenService from '../../services/token-service';
 
-import SaveMelody from './SaveMelody/SaveMelody';
-import UserAccount from './components/UserAccount/UserAccount';
+import SaveMelody from '../SaveMelody/SaveMelody';
+import UserAccount from '../UserAccount/UserAccount';
 
 class App extends Component {
   state = { 
@@ -58,7 +58,7 @@ render() {
       <div className="App">
         <header className="App-header">
           <Header />
-        </header>
+        </header> 
 
           <Route exact path={'/'} component={Jambtn} />
 
@@ -70,8 +70,8 @@ render() {
           <Route path={'/jammin'} component={JamPage} />
 
           <PrivateRoute path={'/save'} component={SaveMelody} />
-          <PrivateRoute path={'/user'} component={UserAccount} />
-          
+          <PrivateRoute path={'/user'} component={UserAccount} /> 
+         
         <Users />
       </div>
     </MusicProvider>

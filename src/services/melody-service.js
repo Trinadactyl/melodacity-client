@@ -38,9 +38,21 @@ const MelodyService = {
       : res.json()
     )
   },
-  // deleteMelody(melody) {
-
-  // }
+  deleteMelody(userId) {
+    return fetch (`${config.API_ENDPOINT}/melodies/${userId}`, {
+      method: 'DELETE',
+      headers: {
+        'content-type': 'application/json'
+      },
+    })
+    .then(res => {
+      if (!res.ok)
+        return res.json().then(e => Promise.reject(e))
+    })
+    .catch(error => {
+      console.error({ error })
+    })
+  }
   //end of melody service
 }
 

@@ -9,24 +9,29 @@ export default class UserAccount extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      melodies: []
+      melodies: [],
+      currentUser: localStorage.getItem('userName'),
+      currentUserId: localStorage.getItem('userId')
     }
   }
 
   //make request for specific users's melodies
   componentDidMount() {
-    const userId = localStorage.getItem('userId')
     MelodyService
-      .getUserSpecificMelodies(userId)
+      .getUserSpecificMelodies(this.state.currentUserId)
       .then(melodies => {
         this.setState({ melodies: melodies })
         console.log('state', this.state)
-      })
+        this.setState({ melodies: this.melodies.filter(melody => melody.id )})})
   }
 
-  handleDeleteClick = () => {
-    alert(`You can't delete this right now.`)
+  remove
 
+  handleDeleteClick = () => {
+    //alert(`You can't delete this right now.`)
+    MelodyService.deleteMelody(this.state.currentUserId)
+    //need to also call func to update state!!!
+    console.log('deleted')
   }
 
   //display the details of each melody within an element
@@ -63,11 +68,9 @@ export default class UserAccount extends Component {
 
   render() {
 
-    const userName = localStorage.getItem('userName')
-
     return (
       <>
-        <h1>Hello {userName}</h1>
+        <h1>Hello {this.state.currentUser}</h1>
         <h2>My Melodies</h2>
         {this.state.melodies.length === 0
           ? <span>You don't have any melodies saved!</span>

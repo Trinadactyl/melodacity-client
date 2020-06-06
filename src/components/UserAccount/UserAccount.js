@@ -8,11 +8,12 @@ export default class UserAccount extends Component {
 
   constructor(props) {
     super(props);
+
     this.state = {
       melodies: [],
       currentUser: localStorage.getItem('userName'),
       currentUserId: localStorage.getItem('userId')
-    }
+    };
   }
 
   //make request for specific users's melodies
@@ -21,23 +22,20 @@ export default class UserAccount extends Component {
       .getUserSpecificMelodies(this.state.currentUserId)
       .then(melodies => {
         this.setState({ melodies: melodies })
-        console.log('state', this.state)
-        this.setState({ melodies: this.melodies.filter(melody => melody.id )})})
+        //console.log('state', this.state)
+      })
   }
-
-  remove
 
   handleDeleteClick = () => {
     //alert(`You can't delete this right now.`)
     MelodyService.deleteMelody(this.state.currentUserId)
     //need to also call func to update state!!!
-    console.log('deleted')
   }
 
   //display the details of each melody within an element
   renderUserMelodies() {
     const melodies = this.state.melodies;
-    console.log('melodies:', melodies);
+    //console.log('melodies:', melodies);
 
     const melodiesList = melodies.map((melody, i) =>
       <li key={i}>
@@ -56,15 +54,6 @@ export default class UserAccount extends Component {
       </ol>
     );
   }
-
-  // {melodies.title}
-  // Key: {melodies.music_key}
-  // Tonic: {melodies.tonic}
-  // progression: {melodies.progression}
-
-  // handleDeleteMelody() {
-
-  // }
 
   render() {
 

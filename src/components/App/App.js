@@ -12,12 +12,11 @@ import KeySelect from '../KeySelect/KeySelect';
 import ProgSelect from '../ProgSelect/ProgSelect';
 import JamPage from '../JamPage/JamPage';
 import RegistrationForm from '../RegistrationForm/RegistrationForm';
-import UsersApiService from '../../services/user-api-service'
 import LoginPage from '../LoginPage/LoginPage';
 import TokenService from '../../services/token-service';
-
 import SaveMelody from '../SaveMelody/SaveMelody';
 import UserAccount from '../UserAccount/UserAccount';
+//import UsersApiService from '../../services/user-api-service'
 
 class App extends Component {
   state = { 
@@ -37,13 +36,14 @@ updateUserName = (userName) => {
   })
 }
 
-componentDidMount() {
-  UsersApiService
-    .getUsers()
-    .then(users => {
-     console.log('users:', users)
-    })
-}
+//To see the users in the database:
+// componentDidMount() {
+//   UsersApiService
+//     .getUsers()
+//     .then(users => {
+//      console.log('users:', users)
+//     })
+// }
 
 render() {
   const value = {

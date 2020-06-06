@@ -41,6 +41,7 @@ export default class Jam extends Component {
 
   componentDidMount() {
     //redirect user to main page if no selections were made
+    //why doesn't it work?
     if (this.context.key === '' && this.context.tonic === '' && this.context.prog === []) {
       this.props.history.push('/')
     }
@@ -70,6 +71,7 @@ export default class Jam extends Component {
     return key
   };
 
+  //Get the correct index values of scale array based on selected progression
   getNoteIndexes(scale, prog) {
     const result = []
 
@@ -81,6 +83,7 @@ export default class Jam extends Component {
     return result
   };
 
+  //get the chords from the correct scale based on the indicied provided 
   getKeySpecificProgression(key, tonic, prog) {
     const keyTonic = tonic === 'major' ? majorScales : minorScales
     const scale = keyTonic[key]
@@ -94,14 +97,15 @@ export default class Jam extends Component {
     // const prog = this.context.prog
 
     const chordArr = this.getKeySpecificProgression(key, tonic, prog)
+    //console.log('chordArr:', chordArr)
+
     const chordList = chordArr.map((chord, i) => 
       <li key={i}> 
         <button className='chord-btn'>
           {chord}
         </button>
       </li> )
-    console.log('chordArr: ',chordArr)
-    console.log("rendering chord buttons")
+
     return (
       <ul className='chordlist'>
         {chordList}
@@ -124,9 +128,6 @@ export default class Jam extends Component {
     const tonic = this.context.tonic
     const prog = this.context.prog
 
-    //console.log(key, tonic, prog)
-    //const chords = this.getKeySpecificProgression(key, tonic, prog)
-    //{this.renderChordButtons(key, tonic, prog)}
     return (
       <>
       <div className='jam-header'>

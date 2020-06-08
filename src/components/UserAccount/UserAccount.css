@@ -1,7 +1,10 @@
 .melody-list {
   list-style-type: none;
   color: aliceblue;
-  margin: 4em;
+  padding-right: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  
 }
 
 .melody-list-item {

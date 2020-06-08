@@ -60,10 +60,10 @@ render() {
         <header className="App-header">
           <Header />
         </header> 
-
-        <Landing/>
         
+          <Route exact path={'/'} component={Landing} />
           <Route exact path={'/'} component={Jambtn} />
+          
 
           <PublicRoute path={'/login'} component={LoginPage} />
           <PublicRoute path={'/register'} component={RegistrationForm} />

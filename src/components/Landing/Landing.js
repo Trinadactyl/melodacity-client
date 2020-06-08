@@ -6,8 +6,14 @@ export default class Landing extends Component {
     return (
       <>
       <header className='landing-header'>
-        <h1>Make Music!</h1>
+        <h2>Welcome, melodist!</h2>
       </header>
+      <div className='intro'>
+        <p> Using basic music theory, melodacity provides a fun and simple interface to help creatives with song composition and exploring 
+          how different note combonations sound together! Choose a key, tonic, and chord progression, and begin making sounds!
+        </p>
+      </div>
+      
       </>
     )
   }

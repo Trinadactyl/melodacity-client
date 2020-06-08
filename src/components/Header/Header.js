@@ -8,7 +8,7 @@ export default function Header () {
   return <>
     <header className='header'>
       <Link to='/'>
-        <h1>Melodactity!</h1>
+        <h1>Melodactity</h1>
       </Link>
 
       <Link to='/user'>

@@ -16,6 +16,7 @@ import LoginPage from '../LoginPage/LoginPage';
 import TokenService from '../../services/token-service';
 import SaveMelody from '../SaveMelody/SaveMelody';
 import UserAccount from '../UserAccount/UserAccount';
+import Landing from '../Landing/Landing';
 //import UsersApiService from '../../services/user-api-service'
 
 class App extends Component {
@@ -60,6 +61,8 @@ render() {
           <Header />
         </header> 
 
+        <Landing/>
+        
           <Route exact path={'/'} component={Jambtn} />
 
           <PublicRoute path={'/login'} component={LoginPage} />

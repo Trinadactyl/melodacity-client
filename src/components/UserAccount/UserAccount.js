@@ -27,8 +27,8 @@ export default class UserAccount extends Component {
   }
 
   handleDeleteClick = () => {
-    //alert(`You can't delete this right now.`)
-    MelodyService.deleteMelody(this.state.currentUserId)
+    alert(`You can't delete this right now.`)
+    //MelodyService.deleteMelody(this.state.currentUserId)
     //need to also call func to update state!!!
   }
 

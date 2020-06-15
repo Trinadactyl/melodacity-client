@@ -17,3 +17,7 @@ label[for='title'] {
   color: aliceblue;
   font-size: 25px;
 }
+
+.message{
+  color: aliceblue;
+}

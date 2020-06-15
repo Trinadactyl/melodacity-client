@@ -18,10 +18,10 @@ export class MusicProvider extends Component {
     tonic: '',
     prog: [],
     melody: [],
-      setKey: ()=>{},
-      setTonic: ()=>{},
-      setProg: ()=>{},
-      setMelody: ()=>{}
+    setKey: ()=>{},
+    setTonic: ()=>{},
+    setProg: ()=>{},
+    setMelody: ()=>{}
   }
 
   setKey = key => {

@@ -1,9 +1,14 @@
 .demo-user {
+  color: aliceblue;
   border: solid 3px ;
   width: 40%;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 20px;
+}
+
+.login-form {
+  color: aliceblue;
 }
 
 input {

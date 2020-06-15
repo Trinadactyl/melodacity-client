@@ -24,16 +24,18 @@ export default class SaveMelody extends Component {
       melody: this.context.melody.join(','),
       user_id: userId
     })
+      //what is this doing?
       .then(res => {
         title.value = ''
       })
     this.setState({ submitted: true })
+    this.props.history.push('/user')
   }
 
   renderSubmitStatus() {
     if(this.state.submitted){
       return (
-       <p>Melody Saved!</p> 
+       <p className="message">Melody Saved!</p> 
       )
     }
     return

@@ -20,9 +20,13 @@ import Landing from '../Landing/Landing';
 //import UsersApiService from '../../services/user-api-service'
 
 class App extends Component {
-  state = { 
+  constructor (props) {
+    super(props)
+    this.state = { 
     isLoggedIn: TokenService.hasAuthToken(), 
     userName: localStorage.userName,
+    //also get name of logged in user!
+    }
   }
 
 updateIsLoggedIn = () => {
@@ -49,6 +53,7 @@ updateUserName = (userName) => {
 render() {
   const value = {
     isLoggedIn: this.state.isLoggedIn,
+    userName: this.state.userName,
     updateIsLoggedIn: this.updateIsLoggedIn,
     updateUserName: this.updateUserName
   }

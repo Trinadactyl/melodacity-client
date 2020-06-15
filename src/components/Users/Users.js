@@ -10,17 +10,10 @@ import { AppContext } from '../../AppContext'
 export default class Users extends Component {
 
   static contextType = AppContext
-
-  // constructor(props) {
-  //   super(props)
-  //   this.state {
-  //     currentUser: this.
-  //   }
-  // }
   
     handleLogoutClick = () => {
     TokenService.clearAuthToken()
-    this.context.toggleLoggedIn()
+    this.context.updateIsLoggedIn()
     this.context.updateUserName()
     }
 

@@ -46,6 +46,7 @@ const MelodyService = {
       },
     })
     .then(res => {
+      //console.log('res', res)
       if (!res.ok)
         return res.json().then(e => Promise.reject(e))
     })

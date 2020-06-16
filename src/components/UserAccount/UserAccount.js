@@ -8,7 +8,6 @@ export default class UserAccount extends Component {
 
   constructor(props) {
     super(props);
-
     this.state = {
       melodies: [],
       currentUser: localStorage.getItem('userName'),
@@ -16,26 +15,34 @@ export default class UserAccount extends Component {
     };
   }
 
-  //make request for specific users's melodies
+  //make request for specific user's melodies
   componentDidMount() {
     MelodyService
       .getUserSpecificMelodies(this.state.currentUserId)
       .then(melodies => {
         this.setState({ melodies: melodies })
-        //console.log('state', this.state)
+        console.log('state', this.state)
       })
   }
 
+  //update the state to reflect deleted melody
+  handleDeleteMelody = id => {
+    this.setState({
+      melodies: this.melodies.filter(melody => melody.id !== id)
+    })
+  }
+
   handleDeleteClick = () => {
-    alert(`You can't delete this right now.`)
-    //MelodyService.deleteMelody(this.state.currentUserId)
-    //need to also call func to update state!!!
+    //alert(`You can't delete this right now.`)
+    console.log(this.state.melodies.id)
+    MelodyService.deleteMelody(this.state.currentUserId)
+    //this.handleDeleteMelody(/*melodyId*/)
+    console.log('deleted')
   }
 
   //display the details of each melody within an element
   renderUserMelodies() {
     const melodies = this.state.melodies;
-    //console.log('melodies:', melodies);
 
     const melodiesList = melodies.map((melody, i) =>
       <li key={i}>
@@ -43,8 +50,7 @@ export default class UserAccount extends Component {
           {i+1}.<button className='delete-btn' onClick={this.handleDeleteClick}>Delete</button>
           <p>{melody.title}</p>
           <p>key: {melody.music_key}</p>
-          <p>progression: {melody.progression}</p>
-          
+          <p>progression: {melody.progression}</p> 
         </div>
       </li>)
 

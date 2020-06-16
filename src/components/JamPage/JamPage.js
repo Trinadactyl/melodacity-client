@@ -92,9 +92,6 @@ export default class Jam extends Component {
   }
 
   renderChordButtons(key, tonic, prog) {
-    // const key = this.context.key
-    // const tonic = this.context.tonic
-    // const prog = this.context.prog
 
     const chordArr = this.getKeySpecificProgression(key, tonic, prog)
     //console.log('chordArr:', chordArr)

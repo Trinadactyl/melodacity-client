@@ -28,15 +28,15 @@ export default class UserAccount extends Component {
   //update the state to reflect deleted melody
   handleDeleteMelody = id => {
     this.setState({
-      melodies: this.melodies.filter(melody => melody.id !== id)
+      melodies: this.state.melodies.filter(melody => melody.id !== id)
     })
   }
 
-  handleDeleteClick = () => {
+  handleDeleteClick = (id) => {
     //alert(`You can't delete this right now.`)
-    console.log(this.state.melodies.id)
+    console.log(this.state.melodies)
     MelodyService.deleteMelody(this.state.currentUserId)
-    //this.handleDeleteMelody(/*melodyId*/)
+    this.handleDeleteMelody(id)
     console.log('deleted')
   }
 
@@ -47,7 +47,7 @@ export default class UserAccount extends Component {
     const melodiesList = melodies.map((melody, i) =>
       <li key={i}>
         <div className='melody-list-item'>
-          {i+1}.<button className='delete-btn' onClick={this.handleDeleteClick}>Delete</button>
+          {i+1}.<button className='delete-btn' onClick={() => this.handleDeleteClick(melody.id)}>Delete</button>
           <p>{melody.title}</p>
           <p>key: {melody.music_key}</p>
           <p>progression: {melody.progression}</p> 

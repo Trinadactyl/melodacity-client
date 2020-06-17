@@ -71,12 +71,12 @@ export default class LoginForm extends Component {
           </input>
         </div>
 
-        <button type='submit' classname='purple-btn'>
+        <button type='submit' className='purple-btn'>
           Login
         </button>    
             
         <Link to={'/'}>
-          <button classname='purple-btn'>
+          <button className='purple-btn'>
             Cancel
           </button>
         </Link>

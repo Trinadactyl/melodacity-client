@@ -39,6 +39,13 @@ import './JamPage.css'
 export default class Jam extends Component {
   static contextType = MusicProvider
 
+  playNote() {
+    let C = new Audio('../../notes/C.mp3')
+    const note = () => C.play()
+    return note
+  }
+
+
   componentDidMount() {
     //redirect user to main page if no selections were made
     //why doesn't it work?
@@ -87,18 +94,15 @@ export default class Jam extends Component {
   getKeySpecificProgression(key, tonic, prog) {
     const keyTonic = tonic === 'major' ? majorScales : minorScales
     const scale = keyTonic[key]
-
     return this.getNoteIndexes(scale, prog)
   }
 
   renderChordButtons(key, tonic, prog) {
-
+    //const note = new Audio('../../C.mp3')
     const chordArr = this.getKeySpecificProgression(key, tonic, prog)
-    //console.log('chordArr:', chordArr)
-
     const chordList = chordArr.map((chord, i) => 
       <li key={i}> 
-        <button className='chord-btn'>
+        <button className='chord-btn' onClick={() => this.playNote()}>
           {chord}
         </button>
       </li> )
@@ -108,7 +112,6 @@ export default class Jam extends Component {
         {chordList}
       </ul>
     )
-
   }
 
   // handleSetMelody() {

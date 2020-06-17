@@ -1,6 +1,7 @@
+import React, { Component } from 'react';
 
-export default function MusicStore () {
-    //WWHWWWH
+export default function Music () {
+  //WWHWWWH
   const majorScales = { 
     'A': ['A','B','Db','D','E','Gb','Ab','A'],
     'Ab': ['Ab','Bb','C','Db','Eb','F','G','Ab'],

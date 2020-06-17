@@ -62,9 +62,9 @@ export default class SaveMelody extends Component {
         </div>
         {this.renderSubmitStatus()}
         <Link to='/jammin'>
-          <button className='btn'>Cancel</button>
+          <button className='purple-btn'>Cancel</button>
         </Link>
-        <button className='btn' type='submit'>
+        <button className='purple-btn' type='submit'>
           Submit
         </button>
       </form>

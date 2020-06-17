@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import AuthApiService from '../../services/auth-api-service'
 import TokenService from '../../services/token-service'
 import { AppContext } from '../../AppContext'
+import './LoginForm.css'
 
 export default class LoginForm extends Component {
   static defaultProps = {
@@ -70,12 +71,12 @@ export default class LoginForm extends Component {
           </input>
         </div>
 
-        <button type='submit'>
+        <button type='submit' classname='purple-btn'>
           Login
         </button>    
             
         <Link to={'/'}>
-          <button>
+          <button classname='purple-btn'>
             Cancel
           </button>
         </Link>

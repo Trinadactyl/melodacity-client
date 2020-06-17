@@ -38,7 +38,7 @@ export default class ProgSelect extends Component {
       <>      
       <h1>Choose a progression</h1>
       {this.displaySelections()}
-      <div className='progressions'>     
+      <div className='prog-select'>     
         <button className='prog-btns' onClick={() => this.context.setProg([1, 4, 5])}>I-IV-V</button>
         <button className='prog-btns' onClick={() => this.context.setProg([1, 4, 7])}>I-IV-VII</button>
         <button className='prog-btns' onClick={() => this.context.setProg([1, 6, 7])}>I-VI-VII</button>
@@ -52,11 +52,11 @@ export default class ProgSelect extends Component {
       </div>
         <nav>
           <Link to={'/select-key'}>
-            <button className='nav'>Back</button>
+            <button className='purple-btn'>Back</button>
           </Link>
           
           <Link to={'/jammin'}>
-            <button className='nav'>Next</button>
+            <button className='purple-btn'>Next</button>
           </Link> 
         </nav>  
       </>

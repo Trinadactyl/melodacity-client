@@ -13,15 +13,14 @@
   margin-right: 10%;
 }
 
-.ctrl-btns {
+/* .ctrl-btns {
   font-size: 20px;
   margin: 4px;
   height: 2em;
   width: auto;
   border-radius: 10%;
   background-color: rgb(185, 122, 207);
- 
-}
+} */
 
 .chord-container {
   /* border: solid 3px black; */
@@ -49,6 +48,6 @@
   margin: 5px;
   border-radius: 50%;
   border: solid black 1px;
-  background-color: rgb(105, 168, 42) ;
+  background-color: rgb(85, 170, 0) ;
   color: black
 }

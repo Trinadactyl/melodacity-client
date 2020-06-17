@@ -12,7 +12,7 @@ export default function Header () {
       </Link>
 
       <Link to='/user'>
-        <button className='melodies-button'>
+        <button className='purple-btn'>
           My Melodies
         </button>
       </Link>
@@ -28,7 +28,8 @@ export default function Header () {
         <option>Select Progression</option>
         <option>Jam!</option>
       </select> */}
-    </header>
-    
+
+
+    </header> 
   </>
 }

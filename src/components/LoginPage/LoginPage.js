@@ -22,7 +22,7 @@ export default class LoginPage extends Component {
         <h2>Login</h2>
 
         <div className='demo-user'>
-          <h4>Login with following credentials to try out the app!</h4>
+          <h4>Login with following credentials to try all the features!</h4>
           <p>Username: test</p>
           <p>Password: password</p>
         </div>

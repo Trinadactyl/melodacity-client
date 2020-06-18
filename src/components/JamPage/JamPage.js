@@ -39,6 +39,10 @@ import './JamPage.css'
 export default class Jam extends Component {
   static contextType = MusicProvider
 
+  handleClick() {
+    alert('This feature is coming soon!')
+  }
+
   componentDidMount() {
     //redirect user to main page if no selections were made
     //why doesn't it work?
@@ -96,7 +100,7 @@ export default class Jam extends Component {
 
     const chordList = chordArr.map((chord, i) => 
       <li key={i}> 
-        <button className='chord-btn'>
+        <button className='chord-btn' onClick={this.handleClick}>
           {chord}
         </button>
       </li> )
@@ -137,9 +141,9 @@ export default class Jam extends Component {
 
       <div className='controls'>
         <p>Coming Soon!</p>
-        <button className='purple-btn'>Record</button>
-        <button className='purple-btn'>Stop</button>
-        <button className='purple-btn'>Play</button>
+        <button className='purple-btn' onClick={this.handleClick}>Record</button>
+        <button className='purple-btn' onClick={this.handleClick}>Stop</button>
+        <button className='purple-btn' onClick={this.handleClick}>Play</button>
       </div>
 
       <nav>

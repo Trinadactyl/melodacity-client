@@ -21,7 +21,6 @@ export default class UserAccount extends Component {
       .getUserSpecificMelodies(this.state.currentUserId)
       .then(melodies => {
         this.setState({ melodies: melodies })
-        console.log('state', this.state)
       })
   }
 
@@ -33,11 +32,9 @@ export default class UserAccount extends Component {
   }
 
   handleDeleteClick = (id) => {
-    //alert(`You can't delete this right now.`)
     console.log(this.state.melodies)
     MelodyService.deleteMelody(id)
     this.handleDeleteMelody(id)
-    console.log('deleted')
   }
 
   //display the details of each melody within an element

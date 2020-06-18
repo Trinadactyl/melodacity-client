@@ -62,7 +62,6 @@ export default class UserAccount extends Component {
   }
 
   render() {
-
     return (
       <>
         <h1>Hello {this.state.currentUser}</h1>

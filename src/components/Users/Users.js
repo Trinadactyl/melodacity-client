@@ -2,9 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Link } from 'react-router-dom'
 import './Users.css'
-//import userApiService from '../../services/user-api-service'
 import TokenService from '../../services/token-service';
-//import config from '../../config'
 import { AppContext } from '../../AppContext'
 
 

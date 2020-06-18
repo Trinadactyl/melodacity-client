@@ -8,21 +8,6 @@ export default class ProgSelect extends Component {
 
   static contextType = MusiProvider
 
-  // constructor(props) {
-  //   super(props)  
-  //   this.state = {
-  //   key: '',
-  //   tonic:'',
-  //   prog: ''
-  //   }
-  // }
-
-  // handleProgSelect(prog) {
-  //   this.setState(state => ({
-  //     prog:prog
-  //   }))
-  // }
-
   displaySelections = () => {
     return (
       <>

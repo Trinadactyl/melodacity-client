@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import MusicProvider from '../../MusicContext'
-//import { Route } from 'react-router-dom';
-//import notes from '../notes';
 import './KeySelect.css'
 
 export default class KeySelect extends Component {

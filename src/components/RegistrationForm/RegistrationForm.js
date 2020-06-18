@@ -86,8 +86,7 @@ export default class RegistrationForm extends Component {
           Cancel
         </button>
       </Link>
-    </Router>
-    
+    </Router>   
   </form>
     )
   }

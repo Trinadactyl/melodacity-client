@@ -83,7 +83,6 @@ export default class LoginForm extends Component {
             </button>
           </Link> 
         </Router>   
-        
       </form>
     )
   }

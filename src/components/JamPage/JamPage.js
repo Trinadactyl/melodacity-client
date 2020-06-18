@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import MusicProvider from '../../MusicContext';
-//import musicStore from '../../musicStore';
 import './JamPage.css'
 
     //each key and its major scale
@@ -93,9 +92,7 @@ export default class Jam extends Component {
   }
 
   renderChordButtons(key, tonic, prog) {
-
     const chordArr = this.getKeySpecificProgression(key, tonic, prog)
-    //console.log('chordArr:', chordArr)
 
     const chordList = chordArr.map((chord, i) => 
       <li key={i}> 
@@ -109,7 +106,6 @@ export default class Jam extends Component {
         {chordList}
       </ul>
     )
-
   }
 
   // handleSetMelody() {

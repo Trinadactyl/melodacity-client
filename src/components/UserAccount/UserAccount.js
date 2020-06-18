@@ -32,7 +32,6 @@ export default class UserAccount extends Component {
   }
 
   handleDeleteClick = (id) => {
-    console.log(this.state.melodies)
     MelodyService.deleteMelody(id)
     this.handleDeleteMelody(id)
   }
@@ -64,7 +63,7 @@ export default class UserAccount extends Component {
         <h1>Hello {this.state.currentUser}</h1>
         <h2>My Melodies</h2>
         {this.state.melodies.length === 0
-          ? <span>You don't have any melodies saved!</span>
+          ? <span className='message'>You don't have any melodies saved!</span>
           : this.renderUserMelodies()}
       </>
     )

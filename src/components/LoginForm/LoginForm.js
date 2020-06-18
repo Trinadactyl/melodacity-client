@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { BrowserRouter as Router } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import AuthApiService from '../../services/auth-api-service'
 import TokenService from '../../services/token-service'
@@ -71,15 +72,18 @@ export default class LoginForm extends Component {
           </input>
         </div>
 
-        <button type='submit' classname='purple-btn'>
+        <button type='submit' className='purple-btn'>
           Login
         </button>    
-            
-        <Link to={'/'}>
-          <button classname='purple-btn'>
-            Cancel
-          </button>
-        </Link>
+
+        <Router>
+          <Link to={'/'}>
+            <button className='purple-btn'>
+              Cancel
+            </button>
+          </Link> 
+        </Router>   
+        
       </form>
     )
   }

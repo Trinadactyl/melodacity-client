@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { BrowserRouter as Router }from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import AuthApiService from '../../services/auth-api-service'
 
@@ -79,11 +80,14 @@ export default class RegistrationForm extends Component {
     <button type='submit'>
       Register
     </button>
-    <Link to={'/'}>
-      <button>
-        Cancel
-      </button>
-    </Link>
+    <Router>
+      <Link to={'/'}>
+        <button>
+          Cancel
+        </button>
+      </Link>
+    </Router>
+    
   </form>
     )
   }

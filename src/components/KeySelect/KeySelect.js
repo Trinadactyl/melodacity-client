@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import MusicProvider from '../../MusicContext'
 //import { Route } from 'react-router-dom';
@@ -55,12 +56,14 @@ export default class KeySelect extends Component {
         </div>
         
         <nav>
-          <Link to='/'>
-            <button className='purple-btn'>Back</button>
-          </Link>
-         <Link to='/select-progression'>
-           <button className='purple-btn' onClick={this.verifySelections}>Next</button>
-         </Link>
+          <Router>
+            <Link to='/'>
+              <button className='purple-btn'>Back</button>
+            </Link>
+            <Link to='/select-progression'>
+              <button className='purple-btn' onClick={this.verifySelections}>Next</button>
+            </Link>
+          </Router>        
         </nav>
   
       </>

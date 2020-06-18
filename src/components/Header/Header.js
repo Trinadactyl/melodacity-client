@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
 import { Link } from 'react-router-dom'
 import './Header.css';
 
@@ -6,16 +7,17 @@ import './Header.css';
 export default function Header () {
 
   return <>
-    <header className='header'>
-      <Link to='/'>
-        <h1>Melodactity</h1>
-      </Link>
+    <Router>
+      <header className='header'>
+        <Link to='/'>
+          <h1>Melodactity</h1>
+        </Link>
 
-      <Link to='/user'>
-        <button className='purple-btn'>
-          My Melodies
-        </button>
-      </Link>
+        <Link to='/user'>
+          <button className='purple-btn'>
+            My Melodies
+          </button>
+        </Link>
 
 {/* Nav select bar */}
       {/* <select for='nav'> 
@@ -30,6 +32,7 @@ export default function Header () {
       </select> */}
 
 
-    </header> 
+      </header> 
+    </Router>
   </>
 }

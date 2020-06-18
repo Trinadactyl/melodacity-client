@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
 import { Link } from 'react-router-dom'
 import './Users.css'
 //import userApiService from '../../services/user-api-service'
@@ -21,11 +22,13 @@ export default class Users extends Component {
     return (
       <div className='user-logged-in'>
         <span className='greeting'>Hello {localStorage.userName}</span>
-        <Link
+        <Router>
+          <Link
           onClick={this.handleLogoutClick}
           to='/'>
           Logout
-        </Link>
+          </Link>
+        </Router>
       </div>
     )
   }
@@ -33,7 +36,7 @@ export default class Users extends Component {
   renderLoginLink() {
       return (
         <div className='user-not-logged-in'>
-          <Link to='/login'>Login </Link>
+          <Router><Link to='/login'>Login </Link></Router>
           |
           <span> Register (Coming soon!)</span>
           {/* <Link to='/register'> Register</Link> */}

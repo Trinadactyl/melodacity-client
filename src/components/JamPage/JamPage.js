@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
+//import { BrowserRouter as Router } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import MusicProvider from '../../MusicContext';
 import './JamPage.css'
@@ -143,14 +143,14 @@ export default class Jam extends Component {
       </div>
 
       <nav>
-        <Router>
+        {/* <Router> */}
           <Link to='/select-progression'>
             <button className='purple-btn'>Back</button>
           </Link> 
           <Link to='/save'>
             <button className='purple-btn'>Save</button>
           </Link> 
-        </Router>
+        {/* </Router> */}
       </nav>
       </>
     )

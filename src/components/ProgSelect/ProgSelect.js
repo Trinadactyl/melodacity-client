@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router } from 'react-router-dom'
+//import { BrowserRouter as Router } from 'react-router-dom'
 import { Link } from 'react-router-dom';
 import MusiProvider from '../../MusicContext'
 import './ProgSelect.css'
@@ -37,7 +37,7 @@ export default class ProgSelect extends Component {
         <button className='prog-btns' onClick={() => this.context.setProg([1, 4, 1, 5, 1])}>I-IV-I-V-I</button>
       </div>
         <nav>
-          <Router>
+          {/* <Router> */}
             <Link to={'/select-key'}>
               <button className='purple-btn'>Back</button>
             </Link>
@@ -45,7 +45,7 @@ export default class ProgSelect extends Component {
             <Link to={'/jammin'}>
               <button className='purple-btn'>Next</button>
             </Link>
-          </Router>
+          {/* </Router> */}
            
         </nav>  
       </>

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
+//import { BrowserRouter as Router } from 'react-router-dom';
 import { Link } from 'react-router-dom'
 import './Users.css'
 import TokenService from '../../services/token-service';
@@ -20,13 +20,13 @@ export default class Users extends Component {
     return (
       <div className='user-logged-in'>
         <span className='greeting'>Hello {localStorage.userName}</span>
-        <Router>
+        {/* <Router> */}
           <Link
           onClick={this.handleLogoutClick}
           to='/'>
           Logout
           </Link>
-        </Router>
+        {/* </Router> */}
       </div>
     )
   }
@@ -34,7 +34,9 @@ export default class Users extends Component {
   renderLoginLink() {
       return (
         <div className='user-not-logged-in'>
-          <Router><Link to='/login'>Login </Link></Router>
+          {/* <Router> */}
+            <Link to='/login'>Login </Link>
+          {/* </Router> */}
           |
           <span> Register (Coming soon!)</span>
           {/* <Link to='/register'> Register</Link> */}

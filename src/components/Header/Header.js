@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
+//import { BrowserRouter as Router } from 'react-router-dom';
 import { Link } from 'react-router-dom'
 import './Header.css';
 
@@ -7,7 +7,7 @@ import './Header.css';
 export default function Header () {
 
   return <>
-    <Router>
+    {/* <Router> */}
       <header className='header'>
         <Link to='/'>
           <h1>Melodactity</h1>
@@ -33,6 +33,6 @@ export default function Header () {
 
 
       </header> 
-    </Router>
+    {/* </Router> */}
   </>
 }

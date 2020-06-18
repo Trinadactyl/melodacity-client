@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
+//import { BrowserRouter as Router } from 'react-router-dom';
 import { Route } from 'react-router-dom';
 import { AppContext } from '../../AppContext';
 import { MusicProvider } from '../../MusicContext';
@@ -67,7 +67,7 @@ render() {
         <header className="App-header">
           <Header />
         </header> 
-        <Router>
+        {/* <Router> */}
           <Route exact path={'/'} component={Landing} />
           <Route exact path={'/'} component={Jambtn} />
           
@@ -81,7 +81,7 @@ render() {
 
           <PrivateRoute path={'/save'} component={SaveMelody} />
           <PrivateRoute path={'/user'} component={UserAccount} /> 
-        </Router> 
+        {/* </Router>  */}
         <Users />
       </div>
       

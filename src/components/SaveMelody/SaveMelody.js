@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { BrowserRouter as Router } from 'react-router-dom'
+//import { BrowserRouter as Router } from 'react-router-dom'
 import MusicProvider from '../../MusicContext';
 import { Link } from 'react-router-dom';
 import MelodyService from '../../services/melody-service';
@@ -62,11 +62,11 @@ export default class SaveMelody extends Component {
           <p>Progression: {prog}</p>
         </div>
         {this.renderSubmitStatus()}
-        <Router>
+        {/* <Router> */}
           <Link to='/jammin'>
             <button className='purple-btn'>Cancel</button>
           </Link> 
-        </Router>
+        {/* </Router> */}
         
         <button className='purple-btn' type='submit'>
           Submit

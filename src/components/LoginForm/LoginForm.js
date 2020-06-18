@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { BrowserRouter as Router } from 'react-router-dom'
+//import { BrowserRouter as Router } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import AuthApiService from '../../services/auth-api-service'
 import TokenService from '../../services/token-service'
@@ -15,32 +15,32 @@ export default class LoginForm extends Component {
 
   state = { error: null }
 
-  handleSubmitJwtAuth = ev => {
-    ev.preventDefault()
-    this.setState({ error: null })
-    const { user_name, password } = ev.target
+    handleSubmitJwtAuth = ev => {
+      ev.preventDefault()
+      this.setState({ error: null })
+      const { user_name, password } = ev.target
 
-    AuthApiService.postLogin({
-      user_name: user_name.value,
-      password: password.value
-    })
-    .then(res => {
-      localStorage.setItem('userName', user_name.value);
-      localStorage.setItem('userId', res.userId )
-      //this.context.updateUserName(user_name.value)
-      //also want to store name of current user to display on login
-      //localStorage.setItem('name', name.value)
-      user_name.value = ''
-      password.value = ''
-      TokenService.saveAuthToken(res.authToken)
-      this.context.updateIsLoggedIn()
-      this.props.onLoginSuccess()
-      //window.location.reload(false)
-    })    
-    .catch(res => {
-      this.setState({ error: res.error})
-    }) 
-  }
+      AuthApiService.postLogin({
+        user_name: user_name.value,
+        password: password.value
+      })
+      .then(res => {
+        localStorage.setItem('userName', user_name.value);
+        localStorage.setItem('userId', res.userId )
+        //this.context.updateUserName(user_name.value)
+        //also want to store name of current user to display on login
+        //localStorage.setItem('name', name.value)
+        user_name.value = ''
+        password.value = ''
+        TokenService.saveAuthToken(res.authToken)
+        this.context.updateIsLoggedIn()
+        this.props.onLoginSuccess()
+        //window.location.reload(false)
+      })    
+      .catch(res => {
+        this.setState({ error: res.error})
+      }) 
+    }
 
 
   render() {
@@ -76,13 +76,13 @@ export default class LoginForm extends Component {
           Login
         </button>    
 
-        <Router>
+        {/* <Router> */}
           <Link to={'/'}>
             <button className='purple-btn'>
               Cancel
             </button>
           </Link> 
-        </Router>   
+        {/* </Router> */}
       </form>
     )
   }

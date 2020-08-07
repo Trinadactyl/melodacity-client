@@ -17,6 +17,11 @@ export default class KeySelect extends Component {
     )
   }
 
+  clearSelections = () => {
+    this.context.setKey('');
+    this.context.setTonic('');
+  }
+
   // verifySelections = () => {
   //   if (this.context.key === '') {
   //     alert('Please select a key')
@@ -58,6 +63,7 @@ export default class KeySelect extends Component {
             <Link to='/'>
               <button className='purple-btn'>Back</button>
             </Link>
+            <button className='purple-btn' onClick={this.clearSelections}>Clear</button>
             <Link to='/select-progression'>
               <button className='purple-btn' onClick={this.verifySelections}>Next</button>
             </Link>

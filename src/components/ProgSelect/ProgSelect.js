@@ -18,6 +18,12 @@ export default class ProgSelect extends Component {
     )
   }
 
+  clearSelections = () => {
+    this.context.setKey('');
+    this.context.setTonic('');
+    this.context.setProg('');
+  }
+
 
   render(){
     return (
@@ -41,7 +47,7 @@ export default class ProgSelect extends Component {
             <Link to={'/select-key'}>
               <button className='purple-btn'>Back</button>
             </Link>
-          
+            <button className='purple-btn' onClick={this.clearSelections}>Clear</button>
             <Link to={'/jammin'}>
               <button className='purple-btn'>Next</button>
             </Link>

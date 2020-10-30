@@ -1,14 +1,14 @@
 import React, { Component } from 'react'
 
 const MusicContext = React.createContext({
-  key:'',
+  key: '',
   tonic: '',
   prog: [],
   melody: [],
-  setKey: () => {},
-  setTonic: () => {},
-  setProg: () => {},
-  setMelody: () => {},
+  setKey: () => { },
+  setTonic: () => { },
+  setProg: () => { },
+  setMelody: () => { },
 })
 export default MusicContext
 
@@ -18,10 +18,10 @@ export class MusicProvider extends Component {
     tonic: '',
     prog: [],
     melody: [],
-    setKey: ()=>{},
-    setTonic: ()=>{},
-    setProg: ()=>{},
-    setMelody: ()=>{}
+    setKey: () => { },
+    setTonic: () => { },
+    setProg: () => { },
+    setMelody: () => { }
   }
 
   setKey = key => {

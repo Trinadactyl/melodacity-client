@@ -1,4 +1,8 @@
 
+
+//not sure if I need this!\
+
+
 export default function MusicStore () {
     //WWHWWWH
   const majorScales = { 

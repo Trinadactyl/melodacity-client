@@ -39,8 +39,11 @@ import './JamPage.css'
 export default class Jam extends Component {
   static contextType = MusicProvider
 
+  //PLAY SOUNDS IN HERE!!!!!!!!!!!!!!!!!!
+  //find value of note played...
   handleClick() {
-    alert('This feature is coming soon!')
+    // alert('This feature is coming soon!')
+    new Audio('/notes/G.mp3').play()
   }
 
   componentDidMount() {

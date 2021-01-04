@@ -26,3 +26,4 @@ yarn-error.log*
 
 /piano-app
 .now
+.vercel

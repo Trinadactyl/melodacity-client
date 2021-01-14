@@ -8,7 +8,6 @@ import Header from '../Header/Header';
 import PrivateRoute from '../Utils/PrivateRoute';
 import PublicRoute from '../Utils/PublicRoute';
 import Jambtn from '../Jambtn/Jambtn';
-import Users from '../Users/Users';
 import KeySelect from '../KeySelect/KeySelect';
 import ProgSelect from '../ProgSelect/ProgSelect';
 import JamPage from '../JamPage/JamPage';
@@ -18,6 +17,7 @@ import TokenService from '../../services/token-service';
 import SaveMelody from '../SaveMelody/SaveMelody';
 import UserAccount from '../UserAccount/UserAccount';
 import Landing from '../Landing/Landing';
+import Menu from '../Menu/Menu';
 //import UsersApiService from '../../services/user-api-service'
 
 class App extends Component {
@@ -66,8 +66,10 @@ render() {
       <div className="App">
         <header className="App-header">
           <Header />
+          <Menu/>
         </header> 
         {/* <Router> */}
+        
           <Route exact path={'/'} component={Landing} />
           <Route exact path={'/'} component={Jambtn} />
           
@@ -82,7 +84,7 @@ render() {
           <PrivateRoute path={'/save'} component={SaveMelody} />
           <PrivateRoute path={'/user'} component={UserAccount} /> 
         {/* </Router>  */}
-        <Users />
+        
       </div>
       
     </MusicProvider>

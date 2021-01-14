@@ -1,5 +1,5 @@
-h2 {
-  color: aliceblue;
+h1{
+  color: #7E007B;
 }
 
 .key-select{
@@ -15,7 +15,7 @@ h2 {
   margin: 5px;
   border-radius: 50%;
   border: solid black 1px;
-  background-color: rgb(85, 170, 0) ;
+  background-color: #36F1CD;
   color: black
 }
 
@@ -28,5 +28,10 @@ h2 {
   margin: 5px;
   border-radius: 40%;
   border: solid black 1px;
-  background-color: rgb(85, 170, 0);
+  background-color: #36F1CD;
+}
+
+
+.selected {
+  color: #F19A3E!;
 }

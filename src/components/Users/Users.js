@@ -19,11 +19,8 @@ export default class Users extends Component {
   renderLogoutLink() {
     return (
       <div className='user-logged-in'>
-        <span className='greeting'>Hello {localStorage.userName}</span>
         {/* <Router> */}
-          <Link
-          onClick={this.handleLogoutClick}
-          to='/'>
+          <Link to='/' className="user-link" onClick={this.handleLogoutClick} >
           Logout
           </Link>
         {/* </Router> */}
@@ -35,10 +32,9 @@ export default class Users extends Component {
       return (
         <div className='user-not-logged-in'>
           {/* <Router> */}
-            <Link to='/login'>Login </Link>
+            <Link to='/login' className="user-link">Login/Register </Link>
           {/* </Router> */}
-          |
-          <span> Register (Coming soon!)</span>
+          {/* <span> Register (Coming soon!)</span> */}
           {/* <Link to='/register'> Register</Link> */}
         </div>
       )
@@ -46,7 +42,7 @@ export default class Users extends Component {
 
   render() {
     return (
-      <div className='user-links'>
+      <div className='user-link'>
         {this.context.isLoggedIn
         ? this.renderLogoutLink()
         : this.renderLoginLink() }

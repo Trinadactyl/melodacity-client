@@ -6,7 +6,9 @@
   float: right;
 }
 
-h1 {
-  color: rgb(85, 170, 0)
+.h {
+  color: #7E007B;
+  font-size: 5em;
+  margin-bottom: 0;
 }
 

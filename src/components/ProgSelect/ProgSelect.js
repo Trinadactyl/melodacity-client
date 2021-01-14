@@ -8,39 +8,63 @@ export default class ProgSelect extends Component {
 
   static contextType = MusiProvider
 
-  displaySelections = () => {
+  
+  displayKey = () => {
+    if (this.context.key === '' || this.context.tonic === '') {
+      return (
+        <>
+          <h2> Don't forget to select a key and tonic on the key tab!</h2>
+        </>
+      )
+    }
     return (
       <>
-        <h2>Selected Key: {this.context.key}</h2>
-        <h2>Selected Tonic: {this.context.tonic}</h2>
-        <h2>Selected Progression: {this.context.prog}</h2>       
+        <h2> Key: {this.context.key} {this.context.tonic}</h2>     
       </>
     )
   }
 
+  displayProg = () => {
+    if (this.context.prog.length === 0) {
+       console.log(this.context.prog)
+      return (
+        <>
+          <h1>Now choose a progression!</h1>
+        </>
+      )
+    } 
+    return (
+      <>
+        <h1>{this.context.prog}</h1>     
+      </>
+    )
+  }
+
+
   clearSelections = () => {
     this.context.setKey('');
     this.context.setTonic('');
-    this.context.setProg('');
+    this.context.setProg([]);
   }
 
 
   render(){
     return (
-      <>      
-      <h1>Choose a progression</h1>
-      {this.displaySelections()}
+      <>  
+      {this.displayKey()}    
+      {this.displayProg()}
+      
       <div className='prog-select'>     
-        <button className='prog-btns' onClick={() => this.context.setProg([1, 4, 5])}>I-IV-V</button>
-        <button className='prog-btns' onClick={() => this.context.setProg([1, 4, 7])}>I-IV-VII</button>
-        <button className='prog-btns' onClick={() => this.context.setProg([1, 6, 7])}>I-VI-VII</button>
-        <button className='prog-btns' onClick={() => this.context.setProg([2, 5, 1])}>II-V-I</button>
-        <button className='prog-btns' onClick={() => this.context.setProg([1, 4, 2, 5])}>I-IV-II-V</button>
-        <button className='prog-btns' onClick={() => this.context.setProg([1, 4, 5, 1])}>I-IV-V-I</button>
-        <button className='prog-btns' onClick={() => this.context.setProg([1, 4, 5, 3, 7])}>I-IV-V-III-VII</button>
-        <button className='prog-btns' onClick={() => this.context.setProg([1, 4, 6, 4])}>I-V-VI-IV</button>
-        <button className='prog-btns' onClick={() => this.context.setProg([3, 6, 2, 5])}>III-VI-II-V</button>
-        <button className='prog-btns' onClick={() => this.context.setProg([1, 4, 1, 5, 1])}>I-IV-I-V-I</button>
+        <button className='prog-btns' onClick={() => this.context.setProg([1, 4, 5])}>1-4-5</button>
+        <button className='prog-btns' onClick={() => this.context.setProg([1, 4, 7])}>1-4-7</button>
+        <button className='prog-btns' onClick={() => this.context.setProg([1, 6, 7])}>1-6-7</button>
+        <button className='prog-btns' onClick={() => this.context.setProg([2, 5, 1])}>2-5-1</button>
+        <button className='prog-btns' onClick={() => this.context.setProg([1, 4, 2, 5])}>1-4-2-5</button>
+        <button className='prog-btns' onClick={() => this.context.setProg([1, 5, 6, 4])}>1-5-6-4</button>
+        <button className='prog-btns' onClick={() => this.context.setProg([1, 4, 5, 3, 7])}>1-4-5-3-7</button>
+        <button className='prog-btns' onClick={() => this.context.setProg([1, 4, 6, 4])}>1-4-6-4</button>
+        <button className='prog-btns' onClick={() => this.context.setProg([3, 6, 2, 5])}>3-6-2-5</button>
+        <button className='prog-btns' onClick={() => this.context.setProg([1, 4, 1, 5, 1])}>1-4-1-5-1</button>
       </div>
         <nav>
           {/* <Router> */}

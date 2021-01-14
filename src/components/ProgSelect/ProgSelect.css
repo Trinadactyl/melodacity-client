@@ -3,13 +3,13 @@
 }
 .prog-btns {
   height: 4em;
-  width: 4em;
+  width:auto;
   font-size: inherit;
   font-weight: bold;
   padding: 5px;
   margin: 5px;
-  border-radius: 50%;
+  border-radius: 45%;
   border: solid black 1px;
-  background-color: rgb(85, 170, 0) ;
+  background-color: #36F1CD;
   color: black
 }

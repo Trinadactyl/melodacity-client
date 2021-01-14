@@ -98,7 +98,7 @@ export default class Jam extends Component {
   //Get the correct index values of scale array based on selected progression
   getNoteIndexes(scale, prog) {
     const result = []
-
+    // console.log(scale, prog)
     for (let i = 0; i < prog.length; i++) {
       const el = scale[prog[i]-1]
 
@@ -116,6 +116,13 @@ export default class Jam extends Component {
   }
 
   renderChordButtons(key, tonic, prog) {
+    //this first block redirects user back to the Key select component if there is no key or tonic value stored
+    //it also prevents the whole app from crashing if this is the case
+    //this should probably be implemented as an error boundary component
+    if (this.context.key === '' || this.context.tonic === '') {
+      this.props.history.push('/select-key')
+    }
+
     const chordArr = this.getKeySpecificProgression(key, tonic, prog)
 
     const chordList = chordArr.map((chord, i) => 

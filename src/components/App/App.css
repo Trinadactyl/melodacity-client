@@ -1,5 +1,7 @@
+
 body {
-  background-color: #222222
+  background-color: #D4C2FC;
+  height: 100%;
 }
 
 .App {
@@ -7,19 +9,19 @@ body {
 }
 
 .App-header {
-  min-height: 30vh;
+  width: auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 button {
   cursor: pointer;
 }
 
-button /*.purple-btn*/ {
-  background-color: #b97acf;
+button {
+  background-color: #13C4A3;
   font-size: inherit;
   font-weight: bold;
   height: auto;

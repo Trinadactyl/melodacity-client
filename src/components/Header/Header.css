@@ -8,7 +8,9 @@
 
 .h {
   color: #7E007B;
-  font-size: 5em;
+  font-size: 4em;
   margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 

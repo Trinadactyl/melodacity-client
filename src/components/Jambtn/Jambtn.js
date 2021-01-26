@@ -10,7 +10,7 @@ export default class Jambtn extends Component {
     // <Router>
      <Link to='/select-key'>
       <button className='Jambtn'> 
-          JAM!        
+          START        
       </button>
       </Link> 
     //</Router>

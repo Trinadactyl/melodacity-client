@@ -9,8 +9,8 @@ export default class Landing extends Component {
         <h2>Welcome, melodist!</h2>
       </header>
       <div className='intro'>
-        <p> Using basic music theory, melodacity provides a fun and simple interface to help creatives with song composition and exploring 
-          how different note combonations sound together! Choose a key, tonic, and chord progression, and begin making sounds!
+        <p> Melodacity applies music theory principles to generate a simple note progression based on the scale you choose. 
+          Click the strt button to make some sounds!
         </p>
       </div>
       

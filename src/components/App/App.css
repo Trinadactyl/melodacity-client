@@ -1,5 +1,6 @@
 
 body {
+  min-width: fit-content;
   background-color: #D4C2FC;
   height: 100%;
 }

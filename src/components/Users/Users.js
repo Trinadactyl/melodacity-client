@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 //import { BrowserRouter as Router } from 'react-router-dom';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './Users.css'
 import TokenService from '../../services/token-service';
 import { AppContext } from '../../AppContext'
@@ -28,11 +29,14 @@ export default class Users extends Component {
     )
   }
 
+  //do something like this to toggle classnames:
+  //do I need to define actie somewhere?
+  //className={isActive ? null : "user-link"}
   renderLoginLink() {
       return (
         <div className='user-not-logged-in'>
           {/* <Router> */}
-            <Link to='/login' className="user-link">Login/Register </Link>
+            <NavLink to='/login' activeClassName="active" className="user-link">Login/Register </NavLink>
           {/* </Router> */}
           {/* <span> Register (Coming soon!)</span> */}
           {/* <Link to='/register'> Register</Link> */}

@@ -15,8 +15,9 @@ export default class KeySelect extends Component {
 
   toggleSelection = (value) => {
     //set context to button's value
-    //dd class to selection so that it changes color when clicked
+    //add class to selection so that it changes color when clicked
   }
+
 
   displaySelections = () => {
     if (this.context.key === '' || this.context.tonic === '') {

@@ -1,6 +1,6 @@
 .melody-list {
   list-style-type: none;
-  color: aliceblue;
+  color: black;
   padding-right: 40px;
   margin-left: auto;
   margin-right: auto;
@@ -9,7 +9,7 @@
 
 .melody-list-item {
   padding: 10px;
-  border: solid aliceblue 3px;
+  border: solid black 3px;
   margin: 10px;
   text-align: left;
 }
@@ -28,6 +28,6 @@
 }
 
 .message {
-  color: aliceblue;
+  color: black;
   font-size: 20px;
 }

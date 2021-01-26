@@ -31,6 +31,9 @@ h1{
   background-color: #36F1CD;
 }
 
+.tonic:active {
+  background-color: red;
+}
 
 .selected {
   color: #F19A3E!;

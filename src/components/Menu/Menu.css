@@ -9,6 +9,7 @@
   flex-direction: row;
   justify-content: space-between;
   padding-left: 0;
+  align-items: center;
 }
 
 .nav-link {
@@ -17,24 +18,16 @@
   padding: 10px;
   border: solid 2px;
   border-radius: 5px;
-  background-color:#F19A3E;
+  background-color:#13C4A3;
   font-size: 1.1em;
   font-weight: 600;
 }
 
-/* .nav-link .active {
-  color: black;
-  width: auto;
-  padding: 10px;
-  border: solid 2px;
-  border-radius: 5px;
-  background-color:red;
-  font-size: 1.1em;
-  font-weight: 600;
-} */
+.nav-link:hover {
+  background-color:#F19A3E;
+}
 
-/* .active {
-  background-color: red;
+.active {
   color: black;
   width: auto;
   padding: 10px;
@@ -42,7 +35,9 @@
   border-radius: 5px;
   font-size: 1.1em;
   font-weight: 600;
-} */
+  background-color:#F19A3E;
+}
+
 
 
 @media (max-width: 540px) {

@@ -11,11 +11,11 @@ export default function Menu() {
   return <>
     <nav className='nav-bar'>
       <ul className="nav-list">
-        <NavLink to="/user" activeClassName="active"><li className="nav-link">My Melodies</li></NavLink> 
-        <NavLink to="/select-key" activeClassName="active"><li className="nav-link">Key</li></NavLink>
-        <NavLink to="select-progression" activeClassName="active"><li className="nav-link">Progression</li></NavLink> 
-        <NavLink to="/jammin" activeClassName="active"><li className="nav-link">Create</li></NavLink> 
-        <li className="nav-link" activeClassName="active"><Users/></li> 
+        <NavLink to="/user" activeClassName="active" className="nav-link"><li >My Melodies</li></NavLink> 
+        <NavLink to="/select-key" activeClassName="active" className="nav-link"><li>Key</li></NavLink>
+        <NavLink to="select-progression" activeClassName="active" className="nav-link"><li>Progression</li></NavLink> 
+        <NavLink to="/jammin" activeClassName="active" className="nav-link"><li>Create</li></NavLink> 
+        <li><Users/></li> 
       </ul>
     </nav>
     

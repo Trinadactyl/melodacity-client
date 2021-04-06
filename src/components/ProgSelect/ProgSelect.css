@@ -1,15 +1,18 @@
 .prog-select {
-  padding: 20px
+  padding: 20px;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
 }
 .prog-btns {
-  height: 4em;
-  width:auto;
-  font-size: inherit;
+  height: 3em;
+  width: 5em;
+  font-size: 1.1em;
   font-weight: bold;
   padding: 5px;
   margin: 5px;
-  border-radius: 45%;
+  border-radius: 5px;
   border: solid black 1px;
-  background-color: #36F1CD;
+  background-color: #FFB140;
   color: black
 }

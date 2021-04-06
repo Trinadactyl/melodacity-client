@@ -1,7 +1,18 @@
+/* 
+background: D3C0D2 thistle
+text: #74226c midnight  
+menu btns:  52aa5e med sea green
+key/prog btns: F7B32B honey yellow
+
+runners up:
+    FFB140 yellow orange
+*/
+
+
 
 body {
   min-width: fit-content;
-  background-color: #D4C2FC;
+  background-color:#D3C0D2;
   height: 100%;
 }
 
@@ -12,7 +23,9 @@ body {
 .App-header {
   width: auto;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
   margin-left: auto;
   margin-right: auto;
 }

@@ -1,21 +1,24 @@
 h1{
-  color: #7E007B;
+  color: #74226c;
 }
 
 .key-select{
-  padding: 20px;
+  padding: 10px;
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .key-btns {
-  height: 4em;
+  height: 3em;
   width: 4em;
-  font-size: inherit;
+  font-size: 1.1em;
   font-weight: bold;
-  padding: 5px;
+  padding: 3px;
   margin: 5px;
-  border-radius: 50%;
+  border-radius: 5px;
   border: solid black 1px;
-  background-color: #36F1CD;
+  background-color: #FFB140;
   color: black
 }
 
@@ -26,7 +29,7 @@ h1{
   font-weight: bold;
   padding: 5px;
   margin: 5px;
-  border-radius: 40%;
+  border-radius: 10px;
   border: solid black 1px;
   background-color: #36F1CD;
 }

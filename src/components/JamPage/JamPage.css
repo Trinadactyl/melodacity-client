@@ -45,8 +45,8 @@
   width: 4em;
   padding: 5px;
   margin: 5px;
-  border-radius: 50%;
+  border-radius: 5px;
   border: solid black 1px;
-  background-color: #36F1CD;
+  background-color: #FFB140;
   color: black
 }

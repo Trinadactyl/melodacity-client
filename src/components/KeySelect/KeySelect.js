@@ -13,10 +13,27 @@ export default class KeySelect extends Component {
     this.state = {selected: true}
   }
 
-  toggleSelection = (value) => {
-    //set context to button's value
-    //add class to selection so that it changes color when clicked
+
+  //SOS! I need to togggle the color of selected key button
+  //only one is colored at a time 
+  //use context value or buttin value??
+
+// 1. upon clicking a button, match the button's value to current state value 
+//  if they match, set selected value to True
+  
+
+// 2. If a button is selected, then give it a class that changes its color
+
+  changeSelectedKeyColor = (e) => {
+    if (this.context.key === e.target.value) {
+
+    }
   }
+
+  toggleSelected = () => {
+    this.setState({selected: !this.state.selected})
+  }
+
 
 
   displaySelections = () => {
@@ -51,8 +68,14 @@ export default class KeySelect extends Component {
         </div>
 
         <div className='key-select'>  
-          <button className='key-btns' onClick={()=> this.context.setKey('A')}>A</button>
-          <button className='key-btns' onClick={()=> this.context.setKey('Bb')}>A#</button>
+          <button className='key-btns' value='A' selected={this.state.selected} onClick={(e)=> {
+            this.context.setKey('A'); 
+            this.toggleSelected();
+            console.log(this.state.selected)}}>A
+          </button>
+
+
+          <button className='key-btns' onClick={()=> {this.context.setKey('Bb')}}>A#</button>
           <button className='key-btns' onClick={()=> this.context.setKey('B')}>B</button>
           <button className='key-btns' onClick={()=> this.context.setKey('C')}>C</button>
           <button className='key-btns' onClick={()=> this.context.setKey('Db')}>C#</button>
@@ -74,7 +97,7 @@ export default class KeySelect extends Component {
             <Link to='/select-progression'>
               <button className='' onClick={this.verifySelections}>Next</button>
             </Link>
-          {/* </Router>         */}
+          {/* </Router> */}
         </nav>
   
       </>

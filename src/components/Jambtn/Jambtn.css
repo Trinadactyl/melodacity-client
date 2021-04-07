@@ -5,6 +5,7 @@
   font-size: 30px;
   font-weight: bolder;
   background-color:#007991;
-  border-radius: 10px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 5px 1px black;
   color: white;
 }

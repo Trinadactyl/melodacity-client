@@ -4,6 +4,13 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+@media screen and (max-width: 492px) {
+  .prog-select {
+    width: 50%;
+  } 
+}
+
 .prog-btns {
   height: 3em;
   width: 5em;

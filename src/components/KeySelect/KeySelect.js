@@ -91,11 +91,11 @@ export default class KeySelect extends Component {
         <nav>
           {/* <Router> */}
             <Link to='/'>
-              <button className='purple-btn'>Back</button>
+              <button>Back</button>
             </Link>
-            <button className='' onClick={this.clearSelections}>Clear</button>
+            <button className='bottom-nav' onClick={this.clearSelections}>Clear</button>
             <Link to='/select-progression'>
-              <button className='' onClick={this.verifySelections}>Next</button>
+              <button className='bottom-nav' onClick={this.verifySelections}>Next</button>
             </Link>
           {/* </Router> */}
         </nav>

@@ -1,5 +1,5 @@
 h1{
-  color: #74226c;
+  color: #613F75;
 }
 
 .key-select{
@@ -17,26 +17,32 @@ h1{
   padding: 3px;
   margin: 5px;
   border-radius: 5px;
-  border: solid black 1px;
-  background-color: #FFB140;
+  border: solid black 2px;
+  background-color: #ffaf40;
   color: black
+}
+
+
+@media screen and (max-width: 808px) {
+  .key-select {
+    width: 50%;
+  } 
 }
 
 .tonic {
   height: 3em;
   width: 5em;
+  color: white;
   font-size: inherit;
   font-weight: bold;
   padding: 5px;
   margin: 5px;
-  border-radius: 10px;
-  border: solid black 1px;
-  background-color: #36F1CD;
+  border-radius: 6px;
+  background-color: #613F75;
+  /* box-shadow: 3px 3px 2px .5px black */
+  border: solid black 2px;
 }
 
-.tonic:active {
-  background-color: red;
-}
 
 .selected {
   color: #F19A3E!;

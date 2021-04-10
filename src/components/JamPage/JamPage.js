@@ -13,7 +13,7 @@ import './JamPage.css'
       'C': ['C','D','E','F','G','A','B','C'],
       'D': ['D','E','Eb','G','A','B','Bb','D'],
       'Db': ['Db','Eb','F','Gb','Ab','Bb','C','Db'],
-      'E': ['E','Gb','Ab','A','B','Db','Fb','E'],
+      'E': ['E','Gb','Ab','A','B','Db','Eb','E'],
       'Eb': ['Eb','F','G','Ab','Bb','C','D','Eb'],
       'F': ['F','G','A','Bb','C','D','E','F'],
       'G': ['G','A','B','C','D','E','Gb','G'],
@@ -29,38 +29,41 @@ import './JamPage.css'
     'C': ['C','D','E','F','G','A','B','C'],
     'D': ['D','E','Eb','G','A','B','Bb','D'],
     'Db': ['Db','Eb','F','Gb','Ab','Bb','C','Db'],
-    'E': ['E','Gb','Ab','A','B','Db','Fb','E'],
+    'E': ['E','Gb','G','A','B','C','D','E'],
     'Eb': ['Eb','F','G','Ab','Bb','C','D','Eb'],
     'F': ['F','G','A','Bb','C','D','E','F'],
     'G': ['G','A','B','C','D','E','Gb','G'],
     'Gb': ['Gb','Ab','Bb','Cb','Db','Eb','F','Gb'],
   }
 
-  // const notes = {
-  //   'A': new Audio('/notes/A.mp3'),
-  //   'Ab': new Audio('/notes/Ab.mp3'),
-  //   'B': new Audio('/notes/B.mp3'),
-  //   'Bb': new Audio('/notes/Bb.mp3'),
-  //   'C': new Audio('/notes/C.mp3'),
-  //   'D': new Audio('/notes/D.mp3'),
-  //   'Db': new Audio('/notes/Db.mp3'),
-  //   'E': new Audio('/notes/E.mp3'),
-  //   'Eb': new Audio('/notes/Eb.mp3'),
-  //   'F': new Audio('/notes/F.mp3'),
-  //   'G': new Audio('/notes/G.mp3'),
-  //   'Gb': new Audio('/notes/Gb.mp3'),
-  // }
+  //sound files
+  const notes = {
+    'A': new Audio('/notes/A.mp3'),
+    'Ab': new Audio('/notes/Ab.mp3'),
+    'B': new Audio('/notes/B.mp3'),
+    'Bb': new Audio('/notes/Bb.mp3'),
+    'C': new Audio('/notes/C.mp3'),
+    'D': new Audio('/notes/D.mp3'),
+    'Db': new Audio('/notes/Db.mp3'),
+    'E': new Audio('/notes/E.mp3'),
+    'Eb': new Audio('/notes/Eb.mp3'),
+    'F': new Audio('/notes/F.mp3'),
+    'G': new Audio('/notes/G.mp3'),
+    'Gb': new Audio('/notes/Gb.mp3'),
+  }
 
 export default class Jam extends Component {
   static contextType = MusicProvider
 
-  //PLAY SOUNDS IN HERE!!!!!!!!!!!!!!!!!!-------------------------------------------------------------------------------------
-  //find value of note played...
-  handleClick(val) {
-    // alert('This feature is coming soon!')
-    //new Audio('/notes/G.mp3').play();
 
-    //console.log(val)
+  handleNoteClick(note) {
+    if (note in notes) {
+      let sound = notes[note];
+      sound.play();
+    }
+    else {
+      console.log(note)
+    }
   }
 
   componentDidMount() {
@@ -127,7 +130,7 @@ export default class Jam extends Component {
 
     const chordList = chordArr.map((chord, i) => 
       <li key={i}> 
-        <button className='chord-btn' value={chord} onClick={() => this.handleClick(chord)}>
+        <button className='chord-btn' value={chord} onClick={() => this.handleNoteClick(chord)}>
           {chord}
         </button>
       </li> )

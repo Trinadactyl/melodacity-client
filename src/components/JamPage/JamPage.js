@@ -2,7 +2,15 @@ import React, { Component } from 'react';
 //import { BrowserRouter as Router } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import MusicProvider from '../../MusicContext';
+import * as Tone from 'tone';
 import './JamPage.css'
+
+//******DOCS********/
+//https://tonejs.github.io/docs/14.7.77/index.html
+
+
+    // const synth = new Tone.Synth().toDestination();
+    // synth.triggerAttackRelease('C4', '8n')
 
     //each key and its major scale
     const majorScales = { 
@@ -38,31 +46,51 @@ import './JamPage.css'
 
   //sound files
   const notes = {
-    'A': new Audio('/notes/A.mp3'),
-    'Ab': new Audio('/notes/Ab.mp3'),
-    'B': new Audio('/notes/B.mp3'),
-    'Bb': new Audio('/notes/Bb.mp3'),
-    'C': new Audio('/notes/C.mp3'),
-    'D': new Audio('/notes/D.mp3'),
-    'Db': new Audio('/notes/Db.mp3'),
-    'E': new Audio('/notes/E.mp3'),
-    'Eb': new Audio('/notes/Eb.mp3'),
-    'F': new Audio('/notes/F.mp3'),
-    'G': new Audio('/notes/G.mp3'),
-    'Gb': new Audio('/notes/Gb.mp3'),
+    'A': 'A4',
+    'Ab': 'G#4',
+    'B': 'B4',
+    'Bb': 'A#4',
+    'C': 'C4',
+    'D': 'D4',
+    'Db': 'C#4',
+    'E': 'E4',
+    'Eb': 'D#4',
+    'F': 'F4',
+    'G': 'G4',
+    'Gb': 'F#4',
   }
+   
+
+  // const rick = new Audio('/rick-astley.mp3');
+  // var isPlaying = false;
 
 export default class Jam extends Component {
   static contextType = MusicProvider
 
+// toggleRick() {
+//   isPlaying ? this.pauseRick() : playRick();
+// }
+
+
+// playRick() {
+//   rick.play();
+//   isPlaying = true;
+// }
+
+// pauseRick() {
+//   rick.pause();
+//   isPlaying = false;
+// }
+
 
   handleNoteClick(note) {
     if (note in notes) {
-      let sound = notes[note];
-      sound.play();
+      console.log(notes[`${note}`])
+      let sound = new Tone.Synth().toDestination();
+      sound.triggerAttackRelease(notes[`${note}`], '8n');
     }
     else {
-      console.log(note)
+      console.log(note + ' clicked. That didn\'t work');
     }
   }
 
@@ -171,9 +199,9 @@ export default class Jam extends Component {
 
       <div className='controls'>
         <p>Coming Soon!</p>
-        <button className='purple-btn' onClick={this.handleClick}>Record</button>
-        <button className='purple-btn' onClick={this.handleClick}>Stop</button>
-        <button className='purple-btn' onClick={this.handleClick}>Play</button>
+        <button className='purple-btn' onClick={this.toggleRick}>Record</button>
+        <button className='purple-btn' onClick={this.toggleRick}>Stop</button>
+        <button className='purple-btn' onClick={this.toggleRick}>Play</button>
       </div>
 
       <nav>
